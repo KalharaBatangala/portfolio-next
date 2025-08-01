@@ -22,13 +22,13 @@ This portfolio website is designed to present professional achievements, project
 
 ## Technologies Used
 
-- **★Next.js 15.4**: A React framework for server-rendered and statically generated web applications.
-- **★Tailwind CSS 3.4.14**: A utility-first CSS framework for responsive and modern designs.
-- **★App Router**: Next.js’s modern routing system for dynamic and nested routes.
-- **★Webpack**: The bundler used for production builds, ensuring compatibility and stability.
-- **★TypeScript**: For type-safe development and improved code maintainability.
-- **★ESLint**: For maintaining code quality and consistency.
-- **★Geist Font**: A modern font family optimized via Next.js’s font optimization.
+**★ Next.js 15.4**: A React framework for server-rendered and statically generated web applications.
+**★ Tailwind CSS 3.4.14**: A utility-first CSS framework for responsive and modern designs.
+**★ App Router**: Next.js’s modern routing system for dynamic and nested routes.
+**★ Webpack**: The bundler used for production builds, ensuring compatibility and stability.
+**★ TypeScript**: For type-safe development and improved code maintainability.
+**★ ESLint**: For maintaining code quality and consistency.
+**★ Geist Font**: A modern font family optimized via Next.js’s font optimization.
 
 ## Getting Started
 
@@ -128,18 +128,3 @@ The website is easily deployable to **Vercel**, the platform optimized for Next.
 
 Alternatively, deploy to other platforms like Netlify or AWS by following the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying).
 
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/your-feature`).
-3. Commit changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
-
-Please ensure code adheres to ESLint rules and TypeScript types.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
