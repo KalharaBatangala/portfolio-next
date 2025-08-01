@@ -22,13 +22,13 @@ This portfolio website is designed to present professional achievements, project
 
 ## Technologies Used
 
-- **Next.js 15.4**: A React framework for server-rendered and statically generated web applications.
-- **Tailwind CSS 3.4.14**: A utility-first CSS framework for responsive and modern designs.
-- **App Router**: Next.js’s modern routing system for dynamic and nested routes.
-- **Webpack**: The bundler used for production builds, ensuring compatibility and stability.
-- **TypeScript**: For type-safe development and improved code maintainability.
-- **ESLint**: For maintaining code quality and consistency.
-- **Geist Font**: A modern font family optimized via Next.js’s font optimization.
+- **★Next.js 15.4**: A React framework for server-rendered and statically generated web applications.
+- **★Tailwind CSS 3.4.14**: A utility-first CSS framework for responsive and modern designs.
+- **★App Router**: Next.js’s modern routing system for dynamic and nested routes.
+- **★Webpack**: The bundler used for production builds, ensuring compatibility and stability.
+- **★TypeScript**: For type-safe development and improved code maintainability.
+- **★ESLint**: For maintaining code quality and consistency.
+- **★Geist Font**: A modern font family optimized via Next.js’s font optimization.
 
 ## Getting Started
 
