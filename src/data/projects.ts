@@ -7,11 +7,13 @@ export interface Project {
   github: string[];
   tags: string[];
   image: string; // URL or local path to image
+  isNew: boolean;
 }
 
 export const projects: Project[] = [
   {
     id: uuid(),
+    isNew: true,
     title: "NeuroSight",
     description: "Brain tumor classification using VGG16 CNN. Developed for a university project focused on medical imaging.",
     github: ["https://github.com/KalharaBatangala/NeuroSight"],
@@ -20,6 +22,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "Internship Management System",
     description: "DevOps-focused system hosted on Azure during internship at SLT Mobitel.",
     github: ["https://github.com/KalharaBatangala/internshipmanagementsystem"],
@@ -28,6 +31,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "ScoreMe",
     description: "Final Year Project - Sports scoring system with mobile and web apps.",
     github: [
@@ -39,6 +43,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: true,
     title: "Real-Time Chat App",
     description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
     github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
@@ -47,6 +52,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "Dog Classifier",
     description: "Dog breed classification using CNN (VGG16).",
     github: ["https://github.com/KalharaBatangala/Dog-Classifier-CNN"],
@@ -55,6 +61,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "Pedro's Pizza",
     description: "Static frontend hosted on Amazon S3. Showcasing DevOps hosting skills.",
     github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
@@ -63,6 +70,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "Passkey Mobile Backend",
     description: "Mobile backend hosted on Azure using cloud platform services.",
     github: ["https://github.com/KalharaBatangala/passkey"],
@@ -71,6 +79,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: false,
     title: "Todo App (.NET)",
     description: "Simple .NET Todo app for framework practice.",
     github: ["https://github.com/KalharaBatangala/Todo-DotNet"],
@@ -79,6 +88,47 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
+    isNew: true,
+    title: "CUDA Programming",
+    description: "Leveraged GPU parallel computing using CUDA.",
+    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
+    tags: ["GPU", "Parallel", "CUDA"],
+    image: "/assets/rtx.png",
+  },
+
+  {
+    id: uuid(),
+    isNew: true,
+    title: "CUDA Programming",
+    description: "Leveraged GPU parallel computing using CUDA.",
+    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
+    tags: ["GPU", "Parallel", "CUDA"],
+    image: "/assets/rtx.png",
+  },
+
+  {
+    id: uuid(),
+    isNew: true,
+    title: "CUDA Programming",
+    description: "Leveraged GPU parallel computing using CUDA.",
+    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
+    tags: ["GPU", "Parallel", "CUDA"],
+    image: "/assets/rtx.png",
+  },
+
+  {
+    id: uuid(),
+    isNew: true,
+    title: "CUDA Programming",
+    description: "Leveraged GPU parallel computing using CUDA.",
+    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
+    tags: ["GPU", "Parallel", "CUDA"],
+    image: "/assets/rtx.png",
+  },
+
+  {
+    id: uuid(),
+    isNew: true,
     title: "CUDA Programming",
     description: "Leveraged GPU parallel computing using CUDA.",
     github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
