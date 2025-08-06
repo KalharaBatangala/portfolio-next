@@ -31,7 +31,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/internshipmanagementsystem"],
     tags: ["DevOps", "Azure", "Internship"],
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
-    contributors: [contributors.kalhara, contributors.Isuri],
+    contributors: [contributors.Kalhara, contributors.Isuri],
   },
   {
     id: uuid(),
@@ -44,7 +44,7 @@ export const projects: Project[] = [
     ],
     tags: ["Mobile", "Web", "Sports"],
     image: "/assets/SM.jpg",
-    contributors: [contributors.kalhara, contributors.Ravindu, contributors.Rushika],
+    contributors: [contributors.Kalhara, contributors.Ravindu, contributors.Rushika],
   },
   {
     id: uuid(),
