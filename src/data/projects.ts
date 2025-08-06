@@ -1,4 +1,5 @@
 import { v4 as uuid } from 'uuid';
+import { contributors, Contributor } from './contributors';
 
 export interface Project {
     id: string;
@@ -8,6 +9,7 @@ export interface Project {
   tags: string[];
   image: string; // URL or local path to image
   isNew: boolean;
+  contributors?: Contributor[];
 }
 
 export const projects: Project[] = [
@@ -19,6 +21,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/NeuroSight"],
     tags: ["AI", "CNN", "Medical"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVu_08F4utt2wfdzvvDbW5oIBy5-Ovg9jrA&s",
+    
   },
   {
     id: uuid(),
@@ -28,6 +31,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/internshipmanagementsystem"],
     tags: ["DevOps", "Azure", "Internship"],
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    contributors: [contributors.kalhara, contributors.Isuri],
   },
   {
     id: uuid(),
@@ -40,6 +44,7 @@ export const projects: Project[] = [
     ],
     tags: ["Mobile", "Web", "Sports"],
     image: "/assets/SM.jpg",
+    contributors: [contributors.kalhara, contributors.Ravindu, contributors.Rushika],
   },
   {
     id: uuid(),
@@ -76,6 +81,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/passkey"],
     tags: ["Azure", "Backend"],
     image: "https://alloy-website.transforms.svdcdn.com/production/passkeys-header.png?w=2388&h=1963&auto=compress%2Cformat&fit=min&dm=1716914506&s=bf3987f105e2c063ee6950628922577b",
+    contributors: [contributors.Isuri]
   },
   {
     id: uuid(),

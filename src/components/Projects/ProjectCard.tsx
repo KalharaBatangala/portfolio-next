@@ -58,6 +58,36 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
           </Link>
         ))}
       </div>
+
+        {/* Project Contributors */}
+        {project.contributors && project.contributors.length > 0 && (
+      <div className="flex items-center mt-3">
+        <span className="text-sm text-gray-400 mr-2">Contributors:</span>
+        <div className="flex -space-x-3">
+          {project.contributors.map((contributor, index) => (
+            <a
+              key={index}
+              href={contributor.profileUrl || '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={contributor.name}
+              className="block"
+            >
+              <img
+                src={contributor.avatar}
+                alt={contributor.name}
+                className="w-8 h-8 rounded-full border-2 border-gray-800 hover:scale-105 transition-transform duration-200"
+              />
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+
+
+
+
+
       <motion.div
         className="absolute inset-0 pointer-events-none"
         initial={{
