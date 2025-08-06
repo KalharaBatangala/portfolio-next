@@ -8,12 +8,12 @@ export interface Contributor {
 
 // set of contributors
 export const contributors = {
-  kalhara: {
+  Kalhara: {
     name: 'Kalhara Batangala',
     avatar: '/assets/profile-pic.jpg',
     profileUrl: 'https://github.com/KalharaBatangala',
   },
-  john: {
+  Thithira: {
     name: 'Thithira Paranawithana',
     avatar: '/assets/thithira.jpg',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
