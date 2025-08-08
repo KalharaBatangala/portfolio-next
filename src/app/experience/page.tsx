@@ -4,6 +4,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
+import ExperienceSection from '@/components/Experiences/ExperienceSection';
 
 const githubUsername = 'KalharaBatangala';
 
@@ -54,6 +55,9 @@ const ExperiencePage: React.FC = () => {
           </motion.div>
         )}
       </AnimatePresence>
+
+
+        <ExperienceSection/>
 
       {/* Main About Content - hidden under splash */}
       <div className={`container mx-auto px-4 py-16 mt-20 ${showSplash ? 'hidden' : 'block'}`}>
