@@ -2,7 +2,9 @@
 
 A modern, high-performance portfolio website showcasing professional work and expertise, crafted with Next.js 15.4, Tailwind CSS 3.4.14, and the App Router for seamless routing and a responsive user experience.
 
-![Demo Screenshot](./public/next.svg)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 
 ## Table of Contents
