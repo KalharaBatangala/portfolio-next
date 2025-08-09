@@ -9,7 +9,7 @@ type ExperienceCardProps = {
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
   return (
-    <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-xl mx-auto mb-6 relative group overflow-hidden">
+    <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-xl mx-auto mb-6 relative group overflow-hidden border border-[#FF7300]">
       {experience.isFeatured && (
         <div className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-semibold px-2 py-1 rounded shadow-lg z-10">
           Featured

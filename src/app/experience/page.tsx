@@ -31,7 +31,7 @@ const ExperiencePage: React.FC = () => {
             initial={{ opacity: 1, scale: 1 }}
             animate={{ opacity: 0, scale: 0.5 }}
             exit={{ opacity: 0, scale: 0.5 }}
-            transition={{ duration: 2, ease: 'easeInOut' }}
+            transition={{ duration: 1, ease: 'easeInOut' }}
             style={{
               position: 'fixed',
               top: 0,
