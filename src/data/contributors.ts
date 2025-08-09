@@ -33,5 +33,10 @@ export const contributors = {
     avatar: 'rushika.jpg',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
   },
+  Dulanji: {
+    name: 'Dulanji Nipunika',
+    avatar: 'dulanji.png',
+    profileUrl: 'https://github.com/Thithira-Paranawithana',
+  },
   
 };

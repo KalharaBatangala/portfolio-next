@@ -81,7 +81,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/passkey"],
     tags: ["Azure", "Backend"],
     image: "https://alloy-website.transforms.svdcdn.com/production/passkeys-header.png?w=2388&h=1963&auto=compress%2Cformat&fit=min&dm=1716914506&s=bf3987f105e2c063ee6950628922577b",
-    contributors: [contributors.Isuri]
+    contributors: [contributors.Kalhara, contributors.Isuri]
   },
   {
     id: uuid(),
@@ -91,6 +91,7 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/Todo-DotNet"],
     tags: [".NET", "Practice"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHy4-fMxXIdw_zHUYnm5DjuGDznZtUXYovpTD5wm126EUp22dHT_FPUywBB-Nz5ywTLig&usqp=CAU",
+    
   },
   {
     id: uuid(),

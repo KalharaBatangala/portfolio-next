@@ -2,6 +2,9 @@
 
 A modern, high-performance portfolio website showcasing professional work and expertise, crafted with Next.js 15.4, Tailwind CSS 3.4.14, and the App Router for seamless routing and a responsive user experience.
 
+![Demo Screenshot](./public/next.svg)
+
+
 ## Table of Contents
 
 - [Overview](#overview)
