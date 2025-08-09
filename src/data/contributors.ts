@@ -10,27 +10,27 @@ export interface Contributor {
 export const contributors = {
   Kalhara: {
     name: 'Kalhara Batangala',
-    avatar: '/assets/profile-pic.jpg',
+    avatar: 'profile-pic.jpg',
     profileUrl: 'https://github.com/KalharaBatangala',
   },
   Thithira: {
     name: 'Thithira Paranawithana',
-    avatar: '/assets/thithira.jpg',
+    avatar: 'thithira.jpg',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
   },
   Isuri: {
     name: 'Isuri Navodya',
-    avatar: '/assets/isuri.png',
+    avatar: 'isuri.png',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
   },
   Ravindu: {
     name: 'Ravindu Buwaneka',
-    avatar: '/assets/ravindu.png',
+    avatar: 'ravindu.png',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
   },
   Rushika: {
     name: 'Rushika David',
-    avatar: '/assets/rushika.jpg',
+    avatar: 'rushika.jpg',
     profileUrl: 'https://github.com/Thithira-Paranawithana',
   },
   

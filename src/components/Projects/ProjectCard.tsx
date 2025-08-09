@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 import { Project } from '@/data/projects';
+import SupabaseImage from '@/components/SupabaseImage';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
@@ -73,11 +74,19 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               title={contributor.name}
               className="block"
             >
-              <img
+              {/* <img
                 src={contributor.avatar}
                 alt={contributor.name}
                 className="w-8 h-8 rounded-full border-2 border-gray-800 hover:scale-105 transition-transform duration-200"
+              /> */}
+
+              <SupabaseImage
+                path={contributor.avatar}
+                alt={contributor.name}
+                className="w-8 h-8 rounded-full border-2 border-gray-800 hover:scale-105 transition-transform duration-200"
               />
+
+
             </a>
           ))}
         </div>
