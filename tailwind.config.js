@@ -13,6 +13,9 @@ const config = {
         'text-secondary': '#D1D5DB', // Light gray
         'text-tertiary': '#9CA3AF', // Muted gray
       },
+      animation: {
+        'spin-slower': 'spin 12s linear infinite',
+      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },

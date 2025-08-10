@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import ExperienceSection from '@/components/Experiences/ExperienceSection';
 
 const githubUsername = 'KalharaBatangala';
-
+const videoURL = '/assets/4.mp4';
 // Orange color = #FF7300 (Current)
 // Green color = #40c463
 
@@ -38,7 +38,7 @@ const ExperiencePage: React.FC = () => {
               left: 0,
               width: '100vw',
               height: '100vh',
-              backgroundColor: '#000',
+              backgroundColor: 'transparent',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
@@ -57,7 +57,27 @@ const ExperiencePage: React.FC = () => {
       </AnimatePresence>
 
 
+<div className="relative">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute top-0 left-0 w-full h-screen object-cover opacity-100"
+        style={{ position: 'fixed', zIndex: -1 }}
+      >
+        <source src={videoURL} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 bg-black bg-opacity-30">
         <ExperienceSection/>
+      </div>
+    </div>
+
+
+
+
+        
 
       {/* Main About Content - hidden under splash */}
       <div className={`container mx-auto px-4 py-16 mt-20 ${showSplash ? 'hidden' : 'block'}`}>

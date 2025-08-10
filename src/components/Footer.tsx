@@ -30,7 +30,7 @@ const Footer = () => {
               </Link>
             </motion.div>
             <p className="text-text-tertiary text-sm text-center md:text-left">
-              Building the Future, One Project at a Time
+              Pioneering intelligent solutions with lightning speed and unmatched accuracy.
             </p>
           </div>
 
