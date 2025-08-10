@@ -100,7 +100,7 @@ const ExperiencePage: React.FC = () => {
           {/* Solid Black Inner Card */}
           <div className="rounded-2xl bg-[#000000] shadow-xl p-8">
             <h1 className="text-4xl font-bold text-white mb-6 text-center">
-              About Me
+              Github {<p className='text-secondary'>Contributions </p>} 
             </h1>
             <p className="text-gray-300 text-lg text-center max-w-2xl mx-auto mb-8">
               I’m a passionate developer who loves turning ideas into reality.

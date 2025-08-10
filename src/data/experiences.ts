@@ -14,7 +14,7 @@ export const experiences: Experience[] = [
     id: 'slt-internship',
     company: 'Sri Lanka Telecom Mobitel (SLT Mobitel)',
     role: 'Intern - DevOps & Cloud Operations',
-    duration: 'Jan 2024 - June 2024',
+    duration: 'Jun 2024 - Dec 2024',
     description: [
       'Managed cloud hosting and deployment of enterprise applications.',
       'Enhanced DevOps pipelines improving deployment speed by 30%.',

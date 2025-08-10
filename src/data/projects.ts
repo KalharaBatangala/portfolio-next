@@ -101,45 +101,5 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
     tags: ["GPU", "Parallel", "CUDA"],
     image: "/assets/rtx.png",
-  },
-
-  {
-    id: uuid(),
-    isNew: true,
-    title: "CUDA Programming",
-    description: "Leveraged GPU parallel computing using CUDA.",
-    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
-    tags: ["GPU", "Parallel", "CUDA"],
-    image: "/assets/rtx.png",
-  },
-
-  {
-    id: uuid(),
-    isNew: true,
-    title: "CUDA Programming",
-    description: "Leveraged GPU parallel computing using CUDA.",
-    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
-    tags: ["GPU", "Parallel", "CUDA"],
-    image: "/assets/rtx.png",
-  },
-
-  {
-    id: uuid(),
-    isNew: true,
-    title: "CUDA Programming",
-    description: "Leveraged GPU parallel computing using CUDA.",
-    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
-    tags: ["GPU", "Parallel", "CUDA"],
-    image: "/assets/rtx.png",
-  },
-
-  {
-    id: uuid(),
-    isNew: true,
-    title: "CUDA Programming",
-    description: "Leveraged GPU parallel computing using CUDA.",
-    github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
-    tags: ["GPU", "Parallel", "CUDA"],
-    image: "/assets/rtx.png",
-  },
+  }
 ];
