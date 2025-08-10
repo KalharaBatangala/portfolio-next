@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';
 import { Project } from '@/data/projects';
-import SupabaseImage from '@/components/SpabaseImage';
+import SupabaseImage from '@/components/SupabaseImage';
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   return (
