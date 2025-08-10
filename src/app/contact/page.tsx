@@ -4,6 +4,13 @@ import { useState } from 'react';
 import Handwriting from '@/components/HandWriting';
 import ContactAnimation from '@/components/ConnectAnimation';
 
+
+// export const metadata = {
+//   title: 'Kalhara Profile | Contact',
+//   description: 'My project portfolio - contact page',
+// };
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',

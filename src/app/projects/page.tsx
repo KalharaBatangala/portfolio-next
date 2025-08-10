@@ -4,6 +4,9 @@
 import ProjectsSection from '@/components/Projects/ProjectsSection';
 import { motion, AnimatePresence } from 'framer-motion';
 import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+
+
 
 const videoURL =
   'https://ythbmiddineeqbsayptz.supabase.co/storage/v1/object/sign/kalhara-portfolio/1.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MDJiNzZmOS1mMWZlLTQ1ODMtOWEyNy1iYzgzMDU5N2EzM2UiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJrYWxoYXJhLXBvcnRmb2xpby8xLm1wNCIsImlhdCI6MTc1NDcyMzUwNywiZXhwIjoxOTEyNDAzNTA3fQ.bHp1HVNxG_whEWTwvNFqHu6rspBUB2w5l_Z2a_0-uG0';
@@ -20,6 +23,13 @@ export default function ProjectsPage() {
 
   return (
     <>
+
+      <Head>
+        <title>Kalhara Profile | Projects</title>
+        <meta name="description" content="Projects page" />
+      </Head>
+
+
       {/* Splash Animation */}
       <AnimatePresence>
         {showSplash && (
