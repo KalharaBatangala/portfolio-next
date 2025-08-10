@@ -2,10 +2,10 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import EnthusiasmCard from '@/components/EnthusiasmCard';
-import Navbar from '@/components/Navbar';
-import ResumeCard from '@/components/ResumeCard';
-import RotatingContact from '@/components/RotatingContact';
+import EnthusiasmCard from '@/components/Home/EnthusiasmCard';
+import Navbar from '@/components/Common/Navbar';
+import ResumeCard from '@/components/Home/ResumeCard';
+import RotatingContact from '@/components/Common/RotatingContact';
 
 export default function Home() {
   const [isZoomed, setIsZoomed] = useState(false);

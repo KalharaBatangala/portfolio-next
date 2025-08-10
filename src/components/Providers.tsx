@@ -4,8 +4,8 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { ThemeProvider } from "@/context/ThemeContext";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/Common/Navbar";
+import Footer from "@/components/Common/Footer";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
