@@ -33,5 +33,6 @@ export default function SupabaseImage({ path, alt, className }: SupabaseImagePro
     );
   }
 
+  // eslint-disable-next-line @next/next/no-img-element
   return <img src={url} alt={alt} className={className} />;
 }
