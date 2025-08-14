@@ -19,7 +19,7 @@ export const projects: Project[] = [
     title: "NeuroSight",
     description: "Brain tumor classification using VGG16 CNN. Developed for a university project focused on medical imaging.",
     github: ["https://github.com/KalharaBatangala/NeuroSight"],
-    tags: ["AI", "CNN", "Medical"],
+    tags: ["Deep Learning", "CNN", "Medical Imaging"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVu_08F4utt2wfdzvvDbW5oIBy5-Ovg9jrA&s",
     
   },
@@ -35,8 +35,8 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
-    isNew: false,
-    title: "ScoreMe",
+    isNew: true,
+    title: "ScoreMe | Final Year Project",
     description: "Final Year Project - Sports scoring system with mobile and web apps.",
     github: [
       "https://github.com/KalharaBatangala/ScoreMe-Mobile2",
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
     github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
     tags: ["FastAPI", "Flask", "Socket.IO"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlXx1-A0bDSUqoCewGPNhVCN-IeXx7gPpqf_GiC2HJKR6UGBwOq9VzcVdt-w6nnbvXYgU&usqp=CAU",
+    image: "https://files.ably.io/ghost/prod/2023/01/build-a-realtime-chat-app-from-scratch--1-.png",
   },
   {
     id: uuid(),
@@ -63,6 +63,16 @@ export const projects: Project[] = [
     github: ["https://github.com/KalharaBatangala/Dog-Classifier-CNN"],
     tags: ["CNN", "Image Classification"],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBQlV2BYVRYZcdLgjsV5voTC3YIW6ePOo35w&s",
+  },
+  {
+    id: uuid(),
+    isNew: true,
+    title: "Space-Sync | Augmented Reality based Furniture App",
+    description: "An augmented reality featured mobile app for interior design",
+    github: ["https://github.com/sxsaa/Space-Sync"],
+    tags: ["Augmented Reality", "Computer Engineering Project", "Unity"],
+    image: "https://d3i2s57s2jetfw.cloudfront.net/wp-content/uploads/2025/08/b4efa85bffd4d66c5ea0ec7cfa0bf684-1200x0-c-default.jpg",
+    contributors: [contributors.Kalhara, contributors.Kavindu, contributors.Niru]
   },
   {
     id: uuid(),
@@ -82,6 +92,17 @@ export const projects: Project[] = [
     tags: ["Azure", "Backend"],
     image: "https://alloy-website.transforms.svdcdn.com/production/passkeys-header.png?w=2388&h=1963&auto=compress%2Cformat&fit=min&dm=1716914506&s=bf3987f105e2c063ee6950628922577b",
     contributors: [contributors.Kalhara, contributors.Isuri]
+  },
+
+  {
+    id: uuid(),
+    isNew: false,
+    title: "InPath Documentory Tracking System",
+    description: "University exam management with intuitive dashboards for both lecturers and students.",
+    github: ["https://github.com/sxsaa/inPATH"],
+    tags: ["Web Design", "Full-stack"],
+    image: "/assets/inpath.png",
+    contributors: [contributors.Kalhara, contributors.Yasindu, contributors.Kavindu, contributors.Niru, contributors.Thithira]
   },
   {
     id: uuid(),
