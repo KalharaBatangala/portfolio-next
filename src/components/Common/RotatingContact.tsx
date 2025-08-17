@@ -20,7 +20,7 @@ export default function RotatingContact() {
           className="flex items-center justify-center absolute left-1/2 top-1/2
                      -translate-x-1/2 -translate-y-1/2 
                      bg-primary text-white rounded-full font-semibold
-                     shadow-md border-2 border-primary
+                     shadow-md border-2 border-primary dark:border-white
                      w-24 h-24 text-center leading-tight
                      hover:bg-white hover:text-secondary
                      transition-colors duration-300

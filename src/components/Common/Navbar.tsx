@@ -1,14 +1,17 @@
+
 'use client';
 
-import React, { useState, useContext } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useContext } from 'react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { ThemeContext } from '@/context/ThemeContext';
 import { motion } from 'framer-motion';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
+import logoImage from '/public/assets/falcon.webp'; // Static import for optimization
 
-const Navbar = () => {
+
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -34,31 +37,35 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div whileHover="hover" whileTap="tap" variants={linkVariants}>
-            <Link href="/" className="flex items-center">
+            <Link href="/" prefetch={true}>
               <Image
-                src="/assets/falcon.png"
+                src={logoImage}
                 alt="Kalhara Batangala Logo"
                 width={48}
                 height={48}
-                className="h-12 w-auto"
+                sizes="(max-width: 640px) 40px, 48px" // Responsive sizing
+                placeholder="blur" // Faster perceived load
+                className="h-10 w-10 sm:h-12 sm:w-12 object-contain" // Consistent scaling
               />
             </Link>
           </motion.div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <motion.div
+            className="hidden md:flex items-center space-x-8"
+            initial={{ opacity: 1 }}
+            whileHover={{ opacity: 1 }} // Container-level animation
+          >
             {navItems.map(({ label, href }) => (
-              <motion.div key={label} whileHover="hover" whileTap="tap" variants={linkVariants}>
-                <Link
-                  href={href}
-                  className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {label}
-                </Link>
-              </motion.div>
+              <Link
+                key={label}
+                href={href}
+                prefetch={true} // Explicit prefetching
+                className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {label}
+              </Link>
             ))}
-
-            {/* Dark Mode Toggle */}
             <DarkModeSwitch
               checked={isDark}
               onChange={toggleTheme}
@@ -68,13 +75,13 @@ const Navbar = () => {
               className="cursor-pointer"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             />
-          </div>
+          </motion.div>
 
           {/* Mobile Toggle */}
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-white dark:text-gray-100 hover:text-secondary"
+              className="text-white dark:text-gray-100 hover:text-secondary focus:outline-none focus:ring-2 focus:ring-secondary rounded-md"
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
             >
               {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
@@ -94,41 +101,34 @@ const Navbar = () => {
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map(({ label, href }) => (
-              <motion.div key={label} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href={href}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-3 py-2 text-white dark:text-gray-100 hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
-                >
-                  {label}
-                </Link>
-              </motion.div>
+              <Link
+                key={label}
+                href={href}
+                prefetch={true}
+                onClick={() => setIsOpen(false)}
+                className="block px-3 py-2 text-white dark:text-gray-100 hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
+              >
+                {label}
+              </Link>
             ))}
-
-            {/* Mobile Dark Mode Toggle */}
-            <button
-              onClick={() => {
-                toggleTheme();
-                toggleMenu();
-              }}
-              className="flex w-full px-3 py-2 items-center text-white dark:text-gray-100 hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
-              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
-            >
+            <div className="flex w-full px-3 py-2 items-center text-white dark:text-gray-100 hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300">
               <DarkModeSwitch
                 checked={isDark}
-                onChange={toggleTheme}
+                onChange={() => {
+                  toggleTheme();
+                  setIsOpen(false); // Close menu on toggle
+                }}
                 size={24}
                 sunColor="#FF7300"
                 moonColor="#D1D5DB"
                 className="cursor-pointer mr-2"
+                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               />
               {isDark ? 'Light Mode' : 'Dark Mode'}
-            </button>
+            </div>
           </div>
         </motion.div>
       )}
     </nav>
   );
-};
-
-export default Navbar;
+}
