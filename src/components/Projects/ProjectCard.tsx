@@ -12,7 +12,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     <motion.div
       className="relative p-6 rounded-lg shadow-lg overflow-hidden group"
       style={{
-        backgroundImage: `url('/assets/titanium.jpg')`,
+        backgroundImage: `url('/assets/titanium.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

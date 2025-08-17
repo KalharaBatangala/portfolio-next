@@ -9,7 +9,7 @@ import Head from 'next/head';
 
 
 const videoURL =
-  'https://ythbmiddineeqbsayptz.supabase.co/storage/v1/object/sign/kalhara-portfolio/1.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MDJiNzZmOS1mMWZlLTQ1ODMtOWEyNy1iYzgzMDU5N2EzM2UiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJrYWxoYXJhLXBvcnRmb2xpby8xLm1wNCIsImlhdCI6MTc1NDcyMzUwNywiZXhwIjoxOTEyNDAzNTA3fQ.bHp1HVNxG_whEWTwvNFqHu6rspBUB2w5l_Z2a_0-uG0';
+  'https://ythbmiddineeqbsayptz.supabase.co/storage/v1/object/sign/kalhara-portfolio/Globe-Optimized.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MDJiNzZmOS1mMWZlLTQ1ODMtOWEyNy1iYzgzMDU5N2EzM2UiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJrYWxoYXJhLXBvcnRmb2xpby9HbG9iZS1PcHRpbWl6ZWQubXA0IiwiaWF0IjoxNzU1NDUxNzc1LCJleHAiOjE5MTMxMzE3NzV9.aqdD5BFEtC_5cvsobgJAIBzqZ4yChdd-SWWCDXf2czw';
 // This video URL expires in 09-08-2030
 // stored in supabase
 

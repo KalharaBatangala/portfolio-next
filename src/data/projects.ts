@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "https://github.com/KalharaBatangala/ScoreMe-WebApp",
     ],
     tags: ["Mobile", "Web", "Sports"],
-    image: "/assets/SM.jpg",
+    image: "/assets/SM.webp",
     contributors: [contributors.Kalhara, contributors.Ravindu, contributors.Rushika],
   },
   {
