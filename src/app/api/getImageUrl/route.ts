@@ -17,8 +17,8 @@ export async function GET(req: NextRequest) {
 
   const { data, error } = await supabaseAdmin
     .storage
-    .from('kalhara-portfolio') // change this to your actual bucket
-    .createSignedUrl(path, 60 * 60); // 1 hour
+    .from('kalhara-portfolio') // supabase bucket name
+    .createSignedUrl(path, 60 * 60); // 1 hour expiration
 
   if (error) {
     return NextResponse.json({ error: error.message }, { status: 500 });
