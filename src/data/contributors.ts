@@ -10,43 +10,43 @@ export interface Contributor {
 export const contributors = {
   Kalhara: {
     name: 'Kalhara Batangala',
-    avatar: 'profile-pic.jpg',
+    avatar: 'profile-pic.webp',
     profileUrl: 'https://github.com/KalharaBatangala',
   },
   Thithira: {
     name: 'Thithira Paranawithana',
-    avatar: 'thithira.jpg',
+    avatar: 'thithira.webp',
     profileUrl: 'https://www.linkedin.com/in/thithiraparanawithana/',
   },
   Isuri: {
     name: 'Isuri Navodya',
-    avatar: 'isuri.png',
+    avatar: 'isuri.webp',
     profileUrl: 'https://www.linkedin.com/in/isuri-bandaranayake-a913442b0/',
   },
   Ravindu: {
     name: 'Ravindu Buwaneka',
-    avatar: 'ravindu.png',
+    avatar: 'ravindu.webp',
     profileUrl: 'https://www.linkedin.com/in/ravindu-buwaneka-42913a1a3/',
   },
   Rushika: {
     name: 'Rushika David',
-    avatar: 'rushika.jpg',
+    avatar: 'rushika.webp',
     profileUrl: 'https://www.linkedin.com/in/rushika-david-jayasinghe-95170b1a3/',
   },
   
   Yasindu: {
     name: 'Yasindu Dissanayake',
-    avatar: 'yasindu.png',
+    avatar: 'yasindu.webp',
     profileUrl: 'https://www.linkedin.com/in/yasindu-dissanayake-foe/',
   },
   Kavindu: {
     name: 'Kavindu Sasanka',
-    avatar: 'kavindu.jpg',
+    avatar: 'kavindu.webp',
     profileUrl: 'https://www.linkedin.com/in/kavindu-sasanka/',
   },
   Niru: {
     name: 'Niru Fernando',
-    avatar: 'niru.jpg',
+    avatar: 'niru.webp',
     profileUrl: 'https://www.linkedin.com/in/niru-fernando-3b86bb184/',
   },
   
