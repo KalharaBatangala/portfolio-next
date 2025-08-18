@@ -1,16 +1,34 @@
+// src/data/projects.ts
 import { v4 as uuid } from 'uuid';
 import { contributors, Contributor } from './contributors';
+import { StaticImageData } from 'next/image';
 
 export interface Project {
-    id: string;
+  id: string;
   title: string;
   description: string;
   github: string[];
   tags: string[];
-  image: string; // URL or local path to image
+  image: StaticImageData; // Updated to StaticImageData for static imports
   isNew: boolean;
   contributors?: Contributor[];
 }
+
+// Static Imports for all thumbnails (convert to WebP via Squoosh, placed in /public/assets/)
+import neurosight from '/public/assets/neurosight.webp';
+import internship from '/public/assets/internship.webp';
+import scoreme from '/public/assets/SM.webp';
+import realtime from '/public/assets/realtime.webp';
+import dogClassifier from '/public/assets/dog.webp';
+import spaceSync from '/public/assets/space-sync.webp';
+import pedrosPizza from '/public/assets/pizza.webp';
+import passkey from '/public/assets/passkeys-header.webp';
+import inpath from '/public/assets/inpath.webp';
+import todoDotNet from '/public/assets/todo.webp';
+import cuda from '/public/assets/rtx.webp';
+
+
+// ******************** ENG THUMBNAILS ******************************* //
 
 export const projects: Project[] = [
   {
@@ -20,8 +38,7 @@ export const projects: Project[] = [
     description: "Brain tumor classification using VGG16 CNN. Developed for a university project focused on medical imaging.",
     github: ["https://github.com/KalharaBatangala/NeuroSight"],
     tags: ["Deep Learning", "CNN", "Medical Imaging"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJVu_08F4utt2wfdzvvDbW5oIBy5-Ovg9jrA&s",
-    
+    image: neurosight, 
   },
   {
     id: uuid(),
@@ -30,7 +47,7 @@ export const projects: Project[] = [
     description: "DevOps-focused system hosted on Azure during internship at SLT Mobitel.",
     github: ["https://github.com/KalharaBatangala/internshipmanagementsystem"],
     tags: ["DevOps", "Azure", "Internship"],
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    image: internship,
     contributors: [contributors.Kalhara, contributors.Isuri],
   },
   {
@@ -43,7 +60,7 @@ export const projects: Project[] = [
       "https://github.com/KalharaBatangala/ScoreMe-WebApp",
     ],
     tags: ["Mobile", "Web", "Sports"],
-    image: "/assets/SM.webp",
+    image: scoreme,
     contributors: [contributors.Kalhara, contributors.Ravindu, contributors.Rushika],
   },
   {
@@ -53,7 +70,7 @@ export const projects: Project[] = [
     description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
     github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
     tags: ["FastAPI", "Flask", "Socket.IO"],
-    image: "https://files.ably.io/ghost/prod/2023/01/build-a-realtime-chat-app-from-scratch--1-.png",
+    image: realtime,
   },
   {
     id: uuid(),
@@ -62,7 +79,7 @@ export const projects: Project[] = [
     description: "Dog breed classification using CNN (VGG16).",
     github: ["https://github.com/KalharaBatangala/Dog-Classifier-CNN"],
     tags: ["CNN", "Image Classification"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBQlV2BYVRYZcdLgjsV5voTC3YIW6ePOo35w&s",
+    image: dogClassifier,
   },
   {
     id: uuid(),
@@ -71,7 +88,7 @@ export const projects: Project[] = [
     description: "An augmented reality featured mobile app for interior design",
     github: ["https://github.com/sxsaa/Space-Sync"],
     tags: ["Augmented Reality", "Computer Engineering Project", "Unity"],
-    image: "https://d3i2s57s2jetfw.cloudfront.net/wp-content/uploads/2025/08/b4efa85bffd4d66c5ea0ec7cfa0bf684-1200x0-c-default.jpg",
+    image: spaceSync,
     contributors: [contributors.Kalhara, contributors.Kavindu, contributors.Niru]
   },
   {
@@ -81,7 +98,7 @@ export const projects: Project[] = [
     description: "Static frontend hosted on Amazon S3. Showcasing DevOps hosting skills.",
     github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
     tags: ["AWS", "Static Site", "DevOps"],
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200&q=80",
+    image: pedrosPizza,
   },
   {
     id: uuid(),
@@ -90,10 +107,9 @@ export const projects: Project[] = [
     description: "Mobile backend hosted on Azure using cloud platform services.",
     github: ["https://github.com/KalharaBatangala/passkey"],
     tags: ["Azure", "Backend"],
-    image: "https://alloy-website.transforms.svdcdn.com/production/passkeys-header.png?w=2388&h=1963&auto=compress%2Cformat&fit=min&dm=1716914506&s=bf3987f105e2c063ee6950628922577b",
+    image: passkey,
     contributors: [contributors.Kalhara, contributors.Isuri]
   },
-
   {
     id: uuid(),
     isNew: false,
@@ -101,7 +117,7 @@ export const projects: Project[] = [
     description: "University exam management with intuitive dashboards for both lecturers and students.",
     github: ["https://github.com/sxsaa/inPATH"],
     tags: ["Web Design", "Full-stack"],
-    image: "/assets/inpath.png",
+    image: inpath,
     contributors: [contributors.Kalhara, contributors.Yasindu, contributors.Kavindu, contributors.Niru, contributors.Thithira]
   },
   {
@@ -111,16 +127,15 @@ export const projects: Project[] = [
     description: "Simple .NET Todo app for framework practice.",
     github: ["https://github.com/KalharaBatangala/Todo-DotNet"],
     tags: [".NET", "Practice"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHy4-fMxXIdw_zHUYnm5DjuGDznZtUXYovpTD5wm126EUp22dHT_FPUywBB-Nz5ywTLig&usqp=CAU",
-    
+    image: todoDotNet,
   },
   {
     id: uuid(),
     isNew: true,
     title: "CUDA Programming",
-    description: "Leveraged GPU parallel computing using CUDA.",
+    description: "Leveraged GPU for parallel computing using CUDA.",
     github: ["https://github.com/KalharaBatangala/CUDA-Programming"],
     tags: ["GPU", "Parallel", "CUDA"],
-    image: "/assets/rtx.png",
+    image: cuda,
   }
 ];

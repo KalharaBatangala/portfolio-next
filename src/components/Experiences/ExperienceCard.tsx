@@ -1,15 +1,13 @@
-'use client';
-
-import React from 'react';
+import Image from 'next/image';
 import { Experience } from '@/data/experiences';
 
 type ExperienceCardProps = {
   experience: Experience;
 };
 
-const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
+export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-xl mx-auto mb-6 relative group overflow-hidden border border-[#FF7300]">
+    <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-6 relative group overflow-hidden border border-[#FF7300]">
       {experience.isFeatured && (
         <div className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-semibold px-2 py-1 rounded shadow-lg z-10">
           Featured
@@ -18,9 +16,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
 
       <div className="flex items-center space-x-4 mb-4">
         {experience.logo && (
-          <img
+          <Image
             src={experience.logo}
             alt={`${experience.company} logo`}
+            width={64}
+            height={64}
+            sizes="64px"
+            placeholder="blur"
             className="w-16 h-16 object-contain rounded"
           />
         )}
@@ -41,10 +43,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       {experience.techStack && (
         <div className="flex flex-wrap gap-2">
           {experience.techStack.map((tech, idx) => (
-            <span
-              key={idx}
-              className="bg-orange-600 text-white text-xs px-2 py-1 rounded-full"
-            >
+            <span key={idx} className="bg-orange-600 text-white text-xs px-2 py-1 rounded-full">
               {tech}
             </span>
           ))}
@@ -52,6 +51,4 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
       )}
     </div>
   );
-};
-
-export default ExperienceCard;
+}
