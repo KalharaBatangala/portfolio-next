@@ -8,7 +8,7 @@ const ResumeCard: React.FC = () => {
       <div className="flex gap-4">
         {/* ML Engineer Resume Button */}
         <a
-          href="/resumes/ml-engineer.pdf"
+          href="/Kalhara_MachineLearningCV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-white font-semibold text-center
@@ -36,7 +36,7 @@ const ResumeCard: React.FC = () => {
         {/* DevOps Engineer Resume Button */}
 
                 <a
-          href="/resumes/ml-engineer.pdf"
+          href="/Kalhara_Batangala_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-secondary font-semibold text-center
