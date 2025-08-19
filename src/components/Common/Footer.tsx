@@ -27,7 +27,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-text-tertiary text-sm text-center md:text-left">
-              Pioneering intelligent solutions with lightning speed and unmatched accuracy.
+              Pioneering intelligent solutions.
             </p>
           </div>
 
