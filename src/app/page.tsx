@@ -17,7 +17,7 @@ export default function Home() {
           fill
           sizes="100vw"
           priority
-          placeholder="blur" // Now works with static import
+          placeholder="blur" 
           className="object-cover object-bottom"
         />
       </div>
