@@ -22,7 +22,7 @@ export async function POST(req: Request) {
   // Send email
   try {
     await resend.emails.send({
-      from: 'portfolio@onresend.com', // Your verified Resend domain
+      from: 'portfolio@resend.dev', // Your verified Resend domain
       to: 'kalharabatangala@gmail.com', // Your email
       subject: 'Message from Portfolio Website',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
