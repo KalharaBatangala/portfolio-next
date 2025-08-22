@@ -39,17 +39,17 @@ export default function Contact() {
       if (response.ok) {
         Swal.fire({
           icon: 'success',
-          title: 'Success!',
-          text: 'Message sent! Thank you for reaching out.',
-          confirmButtonColor: '#4CAF50',
-          timer: 3000,
+          title: 'Message Sent Successfully!',
+          text: 'Thank you for reaching out.',
+          confirmButtonColor: '#4CAF50',  // Green color
+          timer: 5000,
           timerProgressBar: true,
         });
         setFormData({ name: '', email: '', message: '' });
       } else {
         Swal.fire({
           icon: 'error',
-          title: 'Error',
+          title: 'Message Not Sent!',
           text: 'Failed to send message. Please try again.',
           confirmButtonColor: '#d33',
         });
@@ -57,7 +57,7 @@ export default function Contact() {
     } catch (error) {
       Swal.fire({
         icon: 'error',
-        title: 'Error',
+        title: 'Message Not Sent !',
         text: 'Failed to send message. Please try again.',
         confirmButtonColor: '#d33',
       });

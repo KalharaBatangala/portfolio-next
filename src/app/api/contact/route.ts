@@ -26,7 +26,16 @@ export async function POST(req: Request) {
       to: 'kalharabatangala@gmail.com', // Your email
       subject: 'Message from Portfolio Website',
       text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
+      html: `
+        <div style="font-family: Arial, sans-serif; padding: 20px;">
+          <img src="https://kalhara.vercel.app/assets/email-profile.webp" alt="Kalhara Profile" style="max-width: 100px; margin-bottom: 20px;" />
+          <h2>New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Message:</strong> ${message}</p>
+        </div>
+      `,
+      //html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
     });
   } catch (emailError) {
     console.error('Email error:', emailError);
