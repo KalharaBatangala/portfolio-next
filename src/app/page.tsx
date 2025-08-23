@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="relative w-full min-h-screen bg-transparent dark:bg-gray-900 font-poppins">
       {/* Banner */}
-      <div className="mt-16 pt-12 px-12 relative rounded-t-[32px] overflow-hidden" style={{ height: '350px' }}>
+      <div className="mt-16 pt-12 px-12 relative overflow-hidden" style={{ height: '350px' }}>
         <Image
           src={bannerImage} // Use static import
           alt="Portfolio Banner"
