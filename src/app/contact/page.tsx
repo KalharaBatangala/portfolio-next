@@ -1,11 +1,10 @@
+
 // 'use client';
 
 // import { useState } from 'react';
 // import Swal from 'sweetalert2';
 // import Handwriting from '@/components/HandWriting';
 // import ContactAnimation from '@/components/ConnectAnimation';
-
-
 
 // export default function Contact() {
 //   const [formData, setFormData] = useState({
@@ -62,17 +61,17 @@
 //   };
 
 //   return (
-//     <div className="min-h-screen bg-gray-200 dark:bg-gray-900 px-6 py-20 sm:py-32 flex flex-col items-center">
+//     <div className="min-h-screen bg-gray-200 dark:bg-gray-900 px-4 sm:px-6 py-12 sm:py-20 lg:py-32 flex flex-col items-center">
 //       <Handwriting />
 
-//       {/* Side-by-side layout */}
-//       <div className="flex flex-col lg:flex-row items-center justify-center gap-24 w-full max-w-6xl px-32">
+//       {/* Side-by-side layout on desktop, stacked on mobile */}
+//       <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-24 w-full max-w-6xl px-4 sm:px-8 lg:px-32">
 //         {/* Form */}
 //         <form
 //           onSubmit={handleSubmit}
-//           className="flex-1 w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8"
+//           className="flex-1 w-full max-w-lg bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 sm:p-8"
 //         >
-//           <div className="mb-6">
+//           <div className="mb-4 sm:mb-6">
 //             <label
 //               htmlFor="name"
 //               className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -86,13 +85,12 @@
 //               required
 //               value={formData.name}
 //               onChange={handleChange}
-//               className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition"
+//               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition text-sm sm:text-base"
 //               placeholder="Your full name"
-//               style={{ fontSize: '1rem' }}
 //             />
 //           </div>
 
-//           <div className="mb-6">
+//           <div className="mb-4 sm:mb-6">
 //             <label
 //               htmlFor="email"
 //               className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -106,13 +104,12 @@
 //               required
 //               value={formData.email}
 //               onChange={handleChange}
-//               className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition"
+//               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition text-sm sm:text-base"
 //               placeholder="your.email@example.com"
-//               style={{ fontSize: '1rem' }}
 //             />
 //           </div>
 
-//           <div className="mb-6">
+//           <div className="mb-4 sm:mb-6">
 //             <label
 //               htmlFor="message"
 //               className="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300"
@@ -126,15 +123,14 @@
 //               required
 //               value={formData.message}
 //               onChange={handleChange}
-//               className="w-full px-4 py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition resize-none"
+//               className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition resize-none text-sm sm:text-base"
 //               placeholder="Write your message here..."
-//               style={{ fontSize: '1rem' }}
 //             />
 //           </div>
 
 //           <button
 //             type="submit"
-//             className="w-full py-3 bg-secondary text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300"
+//             className="w-full py-2 sm:py-3 bg-secondary text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300 text-sm sm:text-base"
 //           >
 //             Send Message
 //           </button>
@@ -142,7 +138,7 @@
 
 //         {/* Animation */}
 //         <div className="flex-1 w-full flex items-center justify-center">
-//           <div className="w-full max-w-[400px]">
+//           <div className="w-full max-w-[300px] sm:max-w-[400px]">
 //             <ContactAnimation />
 //           </div>
 //         </div>
@@ -150,7 +146,6 @@
 //     </div>
 //   );
 // };
-
 
 
 'use client';
@@ -216,7 +211,10 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gray-200 dark:bg-gray-900 px-4 sm:px-6 py-12 sm:py-20 lg:py-32 flex flex-col items-center">
-      <Handwriting />
+      {/* Wrapper for Handwriting to ensure responsiveness */}
+      <div className="w-full max-w-[90vw] sm:max-w-[80vw] md:max-w-[1200px] flex justify-center">
+        <Handwriting />
+      </div>
 
       {/* Side-by-side layout on desktop, stacked on mobile */}
       <div className="flex flex-col lg:flex-row items-center justify-center gap-8 sm:gap-12 lg:gap-24 w-full max-w-6xl px-4 sm:px-8 lg:px-32">
@@ -297,6 +295,29 @@ export default function Contact() {
           </div>
         </div>
       </div>
+
+      {/* Inline CSS for Handwriting responsiveness */}
+      <style jsx>{`
+        .handwriting-wrapper svg {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          display: block;
+        }
+
+        @media (max-width: 640px) {
+          .handwriting-wrapper svg {
+            transform: scale(0.8);
+            transform-origin: center;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .handwriting-wrapper svg {
+            transform: scale(0.6);
+          }
+        }
+      `}</style>
     </div>
   );
 };
