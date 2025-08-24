@@ -7,7 +7,7 @@ const EnthusiasmCard = () => {
   const interests = [
     'DevOps Engineering',
     'System Administration',
-    'Deep Learning for medical imaging'
+    'Machine Learning'
   ];
 
   return (
