@@ -9,7 +9,7 @@ import { ThemeContext } from '@/context/ThemeContext';
 import { motion } from 'framer-motion';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logoImage from '/public/assets/falcon.webp'; // Static import for optimization
-
+import slLogo from '/public/assets/sl.webp'; // SL logo import
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -75,6 +75,15 @@ export default function Navbar() {
               className="cursor-pointer"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             />
+            <Image
+              src={slLogo}
+              alt="SL Logo"
+              width={24}
+              height={24}
+              sizes="(max-width: 640px) 20px, 24px" // Responsive sizing
+              placeholder="empty" // No blur since it's a small icon
+              className="h-6 w-6 object-contain" // Consistent scaling
+            />
           </motion.div>
 
           {/* Mobile Toggle */}
@@ -125,6 +134,17 @@ export default function Navbar() {
                 aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               />
               {isDark ? 'Light Mode' : 'Dark Mode'}
+            </div>
+            <div className="flex w-full px-3 py-2 items-center">
+              <Image
+                src={slLogo}
+                alt="SL Logo"
+                width={24}
+                height={24}
+                sizes="(max-width: 640px) 20px, 24px" // Responsive sizing
+                placeholder="empty" // No blur since it's a small icon
+                className="h-6 w-6 object-contain" // Consistent scaling
+              />
             </div>
           </div>
         </motion.div>
