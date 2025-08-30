@@ -19,7 +19,8 @@ export default function Home() {
           sizes="(max-width: 768px) 100vw, 1200px" // Optimize for mobile and desktop
           priority
           placeholder="blur" 
-          className="object-cover object-bottom"
+          //className="object-cover object-bottom"
+          className="object-contain md:object-cover object-bottom"
         />
       </div>
 
