@@ -22,15 +22,27 @@ import realtime from '/public/assets/realtime.webp';
 import dogClassifier from '/public/assets/dog.webp';
 import spaceSync from '/public/assets/space-sync.webp';
 import pedrosPizza from '/public/assets/pizza.webp';
-import passkey from '/public/assets/passkeys-header.webp';
+import passkey from '/public/assets/passkey-copy.webp';
 import inpath from '/public/assets/inpath.webp';
 import todoDotNet from '/public/assets/todo.webp';
 import cuda from '/public/assets/rtx.webp';
+import bash from '/public/assets/bash.webp';
 
 
 // ******************** ENG THUMBNAILS ******************************* //
 
 export const projects: Project[] = [
+
+  {
+    id: uuid(),
+    isNew: true,
+    title: "Bash Scripting",
+    description: "A curated collection of Bash scripts for system administration tasks, rigorously tested with Bats",
+    github: ["https://github.com/KalharaBatangala/Bash-Script-Lab"],
+    tags: ["Shell Scripting", "RHEL", "System Administration"],
+    image: bash, 
+  },
+
   {
     id: uuid(),
     isNew: true,
@@ -52,7 +64,7 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
-    isNew: true,
+    isNew: false,
     title: "ScoreMe | Final Year Project",
     description: "Final Year Project - Sports scoring system with mobile and web apps.",
     github: [
@@ -65,21 +77,21 @@ export const projects: Project[] = [
   },
   {
     id: uuid(),
-    isNew: true,
-    title: "Real-Time Chat App",
-    description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
-    github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
-    tags: ["FastAPI", "Flask", "Socket.IO"],
-    image: realtime,
-  },
-  {
-    id: uuid(),
     isNew: false,
     title: "Dog Classifier",
     description: "Dog breed classification using CNN (VGG16).",
     github: ["https://github.com/KalharaBatangala/Dog-Classifier-CNN"],
     tags: ["CNN", "Image Classification"],
     image: dogClassifier,
+  },
+  {
+    id: uuid(),
+    isNew: true,
+    title: "Real-Time Chat App",
+    description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
+    github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
+    tags: ["FastAPI", "Flask", "Socket.IO"],
+    image: realtime,
   },
   {
     id: uuid(),
