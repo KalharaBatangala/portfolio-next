@@ -8,21 +8,21 @@ const ResumeCard: React.FC = () => {
       <div className="flex gap-4">
         {/* ML Engineer Resume Button */}
         <a
-          href="/Kalhara_MachineLearningCV.pdf"
+          href="/Kalhara_SoftwareEngineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-white font-semibold text-center
                     bg-secondary hover:bg-white hover:bg-opacity-90 hover:text-secondary transition-colors duration-300"
           aria-label="Download ML Engineer Resume"
         >
-          Machine Learning Engineer
+          Software Engineer
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth={1.5}
             stroke="currentColor"
-            className="w-12 h-12"
+            className="w-8 h-8"
           >
             <path
               strokeLinecap="round"
