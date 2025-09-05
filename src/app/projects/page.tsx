@@ -5,6 +5,13 @@ import Image from 'next/image';
 import Head from 'next/head';
 import logoImage from '/public/assets/falcon.webp'; // Use WebP from Footer/Navbar
 import SplashAnimation from '@/components/Common/SplashAnimation';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kalhara Profile | Projects',
+  description: 'My Projects in software development.',
+};
+
 
 const videoURL =
   'https://ythbmiddineeqbsayptz.supabase.co/storage/v1/object/sign/kalhara-portfolio/Globe-Optimized.mp4?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV81MDJiNzZmOS1mMWZlLTQ1ODMtOWEyNy1iYzgzMDU5N2EzM2UiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJrYWxoYXJhLXBvcnRmb2xpby9HbG9iZS1PcHRpbWl6ZWQubXA0IiwiaWF0IjoxNzU1NDUxNzc1LCJleHAiOjE5MTMxMzE3NzV9.aqdD5BFEtC_5cvsobgJAIBzqZ4yChdd-SWWCDXf2czw'; // Update after uploading compressed video

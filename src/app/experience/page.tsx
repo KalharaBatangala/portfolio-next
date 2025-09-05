@@ -3,6 +3,13 @@ import Head from 'next/head';
 import ExperienceSection from '@/components/Experiences/ExperienceSection';
 import SplashAnimation from '@/components/Common/SplashAnimation';
 import GitHubCard from '@/components/Experiences/GitHubCard';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kalhara Profile | Experiences',
+  description: 'My Professional career experiences',
+};
+
 
 const githubUsername = 'KalharaBatangala';
 
@@ -21,8 +28,8 @@ export default function ExperiencePage() {
 
       <SplashAnimation />
 
-      <div className="relative bg-white dark:bg-black">
-        <div className="relative z-10 bg-gray-300 dark:bg-black bg-opacity-30 min-h-screen">
+      <div className="relative bg-gray-200 dark:bg-black">
+        <div className="relative z-10 bg-gray-200 dark:bg-black bg-opacity-30 min-h-screen">
           <ExperienceSection />
 
           {/* Divider */}

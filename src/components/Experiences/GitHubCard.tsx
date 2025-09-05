@@ -16,7 +16,7 @@ export default function GitHubCard({ username }: GitHubCardProps) {
           borderImageSlice: 1,
         }}
       >
-        <div className="rounded-2xl bg-[#000000] shadow-xl p-8">
+        <div className="rounded-2xl bg-gray-900 shadow-xl p-8">
           <h1 className="text-4xl font-bold text-white mb-6 text-center">
             Github <span className="text-secondary">Contributions</span>
           </h1>
