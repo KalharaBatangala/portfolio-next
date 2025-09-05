@@ -5,7 +5,7 @@ import { motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 
 interface LiIconProps {
-  reference: React.RefObject<HTMLLIElement>;
+  reference: React.RefObject<HTMLLIElement | null>;
 }
 
 export default function LiIcon({ reference }: LiIconProps) {
