@@ -7,6 +7,11 @@ import EducationCard from './EducationCard';
 import { educationData } from '@/data/education';
 import CertificationCard from './CertificationCard';
 import { certificatesData } from '@/data/certificates';
+import { onlineProfilesData } from '@/data/onlineProfiles';
+import OnlineProfileCard from './onlineProfileCard';
+
+
+
 
 export default function EducationContent() {
   const ref = useRef<HTMLDivElement>(null);
@@ -33,13 +38,34 @@ export default function EducationContent() {
           </ul>
         </div>
         
-
+        {/* Certification Section */}
         <section className="mt-16 pb-16">
           <h2 className="text-4xl font-bold mb-8 text-center text-secondary">Certifications</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certificatesData.map((cert) => (
               <CertificationCard key={cert.id} {...cert} />
             ))}
+          </div>
+        </section>
+
+        {/* Horizontal Line */}
+        <div className="my-8">
+          <div
+            className="h-1 w-full bg-gradient-to-r from-transparent via-primary to-transparent dark:via-secondary"
+            style={{ maxWidth: '100%' }}
+          />
+        </div>
+
+
+        {/* Online Profiles Section */}
+        <section>
+            <div className="mt-12 pb-12">
+            <h3 className="text-4xl font-bold mb-6 text-center text-primary dark:text-secondary">Online Profiles</h3>
+            <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
+              {onlineProfilesData.map((profile) => (
+                <OnlineProfileCard key={profile.id} {...profile} />
+              ))}
+            </div>
           </div>
         </section>
 
