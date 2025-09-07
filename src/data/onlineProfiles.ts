@@ -8,6 +8,7 @@ import THM from '/public/assets/THM-profile.webp';
 import HTB from '/public/assets/HTB-profile.webp';
 import HRNK from '/public/assets/HRNK-profile.webp';
 import MS from '/public/assets/MS-profile.webp';
+import KodeKloud from '/public/assets/kodekloud-profile.webp';
 
 
 export interface OnlineProfile {
@@ -53,6 +54,13 @@ export const onlineProfilesData: OnlineProfile[] = [
     icon: MS,
     link: 'https://learn.microsoft.com/en-us/users/drammkbatangala-6601/transcript/763j4f102l48k85?tab=tab-learning-paths',
     tooltip: 'Microsoft Learning',
+  },
+  {
+    id: 6,
+    name: 'Microsoft Learn',
+    icon: KodeKloud,
+    link: 'https://learn.kodekloud.com/user/certificate/7064aa56-761a-44c5-acbd-63d5fd0e384b',
+    tooltip: 'Kodekloud',
   },
   
 ];
