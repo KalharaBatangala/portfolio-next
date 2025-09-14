@@ -1,6 +1,7 @@
 
 import { StaticImageData } from 'next/image';
 import sltLogo from '/public/assets/slt-logo.webp'; 
+import bullet from '/public/assets/bullet.png'; 
 
 export interface Experience {
   id: string;
@@ -11,6 +12,7 @@ export interface Experience {
   logo?: StaticImageData;
   techStack?: string[];
   isFeatured?: boolean;
+  documents?: { title: string; url: string }[];
 }
 
 export const experiences: Experience[] = [
@@ -35,6 +37,11 @@ export const experiences: Experience[] = [
     logo: sltLogo,
     techStack: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD','RHEL'],
     isFeatured: true,
+    documents: [
+      { title: 'Data Center Visit Report', url: '/public/Report on Datacenter Visit.pdf' },
+      { title: 'Kubernetes Cluster Setup Guide', url: 'https://example.com/k8s-cluster-guide.pdf' },
+      { title: 'CI/CD Pipeline Configuration', url: 'https://example.com/cicd-pipeline-config.pdf' },
+    ],
   },
  
 ];

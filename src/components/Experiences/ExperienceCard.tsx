@@ -49,6 +49,29 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           ))}
         </div>
       )}
+
+      {experience.documents && experience.documents.length > 0 && (
+        <div className="mt-4">
+          <h4 className="text-lg font-semibold text-white mb-2">Supporting Documents</h4>
+          <ul className="list-disc list-inside text-gray-300">
+            {experience.documents.map((doc, idx) => (
+              <li key={idx}>
+                <a
+                  href={doc.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-400 hover:text-orange-300 underline"
+                >
+                  {doc.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+
+
     </div>
   );
 }
