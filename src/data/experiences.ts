@@ -38,12 +38,12 @@ export const experiences: Experience[] = [
     techStack: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD','RHEL'],
     isFeatured: true,
     documents: [
-      { title: 'Data Center Visit Report', url: '/Report on Datacenter Visit.pdf' },
-      { title: 'Kubernetes Cluster Setup Guide', url: '/Creating Kubernetes Cluster.pdf' },
-      { title: 'Zabbix Installation Guide', url: '/Zabbix Installation Guide.pdf' },
-      { title: 'Hosting MERN Application Guide', url: '/Hosting MERN on RockyLinux-server.pdf' },
-      { title: 'Guide on creating Virtual Machines in VMWare', url: '/How to Create a Virtual Machine in VMware ESXI.pdf' },
-      { title: 'Industrial Training Report', url: '/Industrial Training Report.pdf' },
+      { title: 'Data Center Visit Report', url: '/Documents/Report on Datacenter Visit.pdf' },
+      { title: 'Kubernetes Cluster Setup Guide', url: '/Documents/Creating Kubernetes Cluster.pdf' },
+      { title: 'Zabbix Installation Guide', url: '/Documents/Zabbix Installation Guide.pdf' },
+      { title: 'Hosting MERN Application Guide', url: '/Documents/Hosting MERN on RockyLinux-server.pdf' },
+      { title: 'Guide on creating Virtual Machines in VMWare', url: '/Documents/How to Create a Virtual Machine in VMware ESXI.pdf' },
+      { title: 'Industrial Training Report', url: '/Documents/Industrial Training Report.pdf' },
     ],
   },
  
