@@ -38,7 +38,7 @@ export const experiences: Experience[] = [
     techStack: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD','RHEL'],
     isFeatured: true,
     documents: [
-      { title: 'Data Center Visit Report', url: '/public/Report on Datacenter Visit.pdf' },
+      { title: 'Data Center Visit Report', url: '/Report on Datacenter Visit.pdf' },
       { title: 'Kubernetes Cluster Setup Guide', url: 'https://example.com/k8s-cluster-guide.pdf' },
       { title: 'CI/CD Pipeline Configuration', url: 'https://example.com/cicd-pipeline-config.pdf' },
     ],
