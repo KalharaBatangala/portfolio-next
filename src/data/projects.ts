@@ -12,6 +12,7 @@ export interface Project {
   image: StaticImageData; // Updated to StaticImageData for static imports
   isNew: boolean;
   contributors?: Contributor[];
+  website?: string;
 }
 
 // Static Imports for all thumbnails (convert to WebP via Squoosh, placed in /public/assets/)
@@ -24,9 +25,9 @@ import spaceSync from '/public/assets/space-sync.webp';
 import pedrosPizza from '/public/assets/pizza.webp';
 import passkey from '/public/assets/passkey-copy.webp';
 import inpath from '/public/assets/inpath.webp';
-import todoDotNet from '/public/assets/todo.webp';
 import cuda from '/public/assets/rtx.webp';
 import bash from '/public/assets/bash.webp';
+import coffee from '/public/assets/Coffee.webp';
 
 
 // ******************** ENG THUMBNAILS ******************************* //
@@ -42,6 +43,7 @@ export const projects: Project[] = [
     tags: ["Shell Scripting", "RHEL", "System Administration"],
     image: bash, 
   },
+// *************************************************************************** //
 
   {
     id: uuid(),
@@ -52,6 +54,20 @@ export const projects: Project[] = [
     tags: ["Deep Learning", "CNN", "Medical Imaging"],
     image: neurosight, 
   },
+// *************************************************************************** //
+
+  {
+    id: uuid(),
+    isNew: false,
+    title: "Royal Cofféé House",
+    description: "A modern coffee shop web application with an elegant UI and smooth ordering flow, built using Next.js.",
+    github: ["https://github.com/KalharaBatangala/coffee-shop"],
+    tags: ["Next.js", "Full-Stack Development", "E-Commerce"],
+    image: coffee,
+    website: 'https://royal-coffee.netlify.app/'
+  },
+// *************************************************************************** //
+
   {
     id: uuid(),
     isNew: false,
@@ -62,6 +78,8 @@ export const projects: Project[] = [
     image: internship,
     contributors: [contributors.Kalhara, contributors.Isuri],
   },
+// *************************************************************************** //
+
   {
     id: uuid(),
     isNew: false,
@@ -75,6 +93,8 @@ export const projects: Project[] = [
     image: scoreme,
     contributors: [contributors.Kalhara, contributors.Ravindu, contributors.Rushika],
   },
+// *************************************************************************** //
+
   {
     id: uuid(),
     isNew: false,
@@ -84,6 +104,8 @@ export const projects: Project[] = [
     tags: ["CNN", "Image Classification"],
     image: dogClassifier,
   },
+// *************************************************************************** //
+
   {
     id: uuid(),
     isNew: true,
@@ -93,6 +115,8 @@ export const projects: Project[] = [
     tags: ["FastAPI", "Flask", "Socket.IO"],
     image: realtime,
   },
+// *************************************************************************** //
+
   {
     id: uuid(),
     isNew: true,
@@ -103,15 +127,7 @@ export const projects: Project[] = [
     image: spaceSync,
     contributors: [contributors.Kalhara, contributors.Kavindu, contributors.Niru]
   },
-  {
-    id: uuid(),
-    isNew: false,
-    title: "Pedro's Pizza",
-    description: "Static frontend hosted on Amazon S3. Showcasing DevOps hosting skills.",
-    github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
-    tags: ["AWS", "Static Site", "DevOps"],
-    image: pedrosPizza,
-  },
+// *************************************************************************** //
   {
     id: uuid(),
     isNew: false,
@@ -122,6 +138,18 @@ export const projects: Project[] = [
     image: passkey,
     contributors: [contributors.Kalhara, contributors.Isuri]
   },
+// *************************************************************************** //
+
+  {
+    id: uuid(),
+    isNew: false,
+    title: "Pedro's Pizza",
+    description: "Static frontend hosted on Amazon S3. Showcasing DevOps hosting skills.",
+    github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
+    tags: ["AWS", "Static Site", "DevOps"],
+    image: pedrosPizza,
+  },
+// *************************************************************************** //
   {
     id: uuid(),
     isNew: false,
@@ -132,15 +160,9 @@ export const projects: Project[] = [
     image: inpath,
     contributors: [contributors.Kalhara, contributors.Yasindu, contributors.Kavindu, contributors.Niru, contributors.Thithira]
   },
-  {
-    id: uuid(),
-    isNew: false,
-    title: "Todo App (.NET)",
-    description: "Simple .NET Todo app for framework practice.",
-    github: ["https://github.com/KalharaBatangala/Todo-DotNet"],
-    tags: [".NET", "Practice"],
-    image: todoDotNet,
-  },
+// *************************************************************************** //
+
+  
   {
     id: uuid(),
     isNew: true,
