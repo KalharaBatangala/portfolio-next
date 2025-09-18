@@ -14,6 +14,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       )}
 
+
+      {/* Experience Head Section */}
       <div className="flex items-center space-x-4 mb-4">
         {experience.logo && (
           <Image
@@ -34,12 +36,14 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       </div>
 
-      <ul className="list-disc list-inside text-gray-300 mb-4">
+        {/*  Work Experience Section */}
+      <ul className="list-disc list-inside text-gray-300 mb-4 marker:text-secondary">
         {experience.description.map((point, idx) => (
           <li key={idx}>{point}</li>
         ))}
       </ul>
 
+        {/* Tech Stack Section */}
       {experience.techStack && (
         <div className="flex flex-wrap gap-2">
           {experience.techStack.map((tech, idx) => (
@@ -50,17 +54,18 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       )}
 
+      {/*  Additional Links */}
       {experience.documents && experience.documents.length > 0 && (
         <div className="mt-4">
           <h4 className="text-lg font-semibold text-white mb-2">Supporting Documents</h4>
-          <ul className="list-disc list-inside text-gray-300">
+          <ul className="list-disc list-inside text-secondary">
             {experience.documents.map((doc, idx) => (
               <li key={idx}>
                 <a
                   href={doc.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-orange-400 hover:text-orange-300 underline"
+                  className="text-secondary hover:text-gray-300 underline"
                 >
                   {doc.title}
                 </a>
