@@ -6,6 +6,8 @@ import RotatingContact from '@/components/Common/RotatingContact';
 import ProfileCard from '@/components/Home/ProfileCard';
 import bannerImage from '/public/assets/Portfolio-banner.webp'; // Static import
 
+
+
 export default function Home() {
   return (
     <div className="relative w-full min-h-screen bg-transparent dark:bg-gray-900 font-poppins">
