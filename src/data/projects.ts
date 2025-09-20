@@ -22,7 +22,7 @@ import scoreme from '/public/assets/SM.webp';
 import realtime from '/public/assets/realtime.webp';
 import dogClassifier from '/public/assets/dog.webp';
 import spaceSync from '/public/assets/space-sync.webp';
-import pedrosPizza from '/public/assets/pizza.webp';
+import unity from '/public/assets/unity.webp';
 import passkey from '/public/assets/passkey-copy.webp';
 import inpath from '/public/assets/inpath.webp';
 import cuda from '/public/assets/rtx.webp';
@@ -143,11 +143,12 @@ export const projects: Project[] = [
   {
     id: uuid(),
     isNew: false,
-    title: "Pedro's Pizza",
-    description: "Static frontend hosted on Amazon S3. Showcasing DevOps hosting skills.",
+    title: "3D Game Development with Unity",
+    description: "Developed a basic 3D platformer and a 2D puzzle game using Unity, gaining hands-on experience with C# scripting, physics engines, and asset integration.",
     github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
-    tags: ["AWS", "Static Site", "DevOps"],
-    image: pedrosPizza,
+    tags: ["Unity", "Game Development", "Real-time Rendering"],
+    image: unity,
+    website: 'https://play.unity.com/en/games/cc5056c7-a74b-445b-a8bf-b583bc4b663e/kalharabuild'
   },
 // *************************************************************************** //
   {
