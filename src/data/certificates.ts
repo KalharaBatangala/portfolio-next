@@ -32,6 +32,14 @@ export const certificatesData: CertificateData[] = [
   },
   {
     id: uuid(),
+    name: 'Jenkins - Level 1',
+    issuer: 'Issued by Kodekloud',
+    date: 'September 2025',
+    link: 'https://engineer.kodekloud.com/certificate-verification/28e5469e-2769-4be0-bb2d-b2f8b7cd6e5d',
+    background: Background1,
+  },
+  {
+    id: uuid(),
     name: 'Deep Learning for Object Detection',
     issuer: 'Issued by Mathworks',
     date: 'May 2024',
