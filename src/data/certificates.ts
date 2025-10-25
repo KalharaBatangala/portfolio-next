@@ -48,6 +48,14 @@ export const certificatesData: CertificateData[] = [
   },
   {
     id: uuid(),
+    name: 'Linux - Level 1',
+    issuer: 'Issued by Kodekloud',
+    date: 'October 2025',
+    link: 'https://engineer.kodekloud.com/certificate-verification/e74e3dde-aca5-46d7-ac6f-669403d52eae?view',
+    background: Background1,
+  },
+  {
+    id: uuid(),
     name: 'Deep Learning for Object Detection',
     issuer: 'Issued by Mathworks',
     date: 'May 2024',
