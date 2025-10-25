@@ -28,6 +28,7 @@ import inpath from '/public/assets/inpath.webp';
 import cuda from '/public/assets/rtx.webp';
 import bash from '/public/assets/bash.webp';
 import coffee from '/public/assets/Coffee.webp';
+import teapicker from '/public/assets/teapicker.webp';
 
 
 // ******************** ENG THUMBNAILS ******************************* //
@@ -36,7 +37,7 @@ export const projects: Project[] = [
 
   {
     id: uuid(),
-    isNew: true,
+    isNew: false,
     title: "Bash Scripting",
     description: "A curated collection of Bash scripts for system administration tasks, rigorously tested with Bats",
     github: ["https://github.com/KalharaBatangala/Bash-Script-Lab"],
@@ -65,6 +66,17 @@ export const projects: Project[] = [
     tags: ["Next.js", "Full-Stack Development", "E-Commerce"],
     image: coffee,
     website: 'https://royal-coffee.netlify.app/'
+  },
+// *************************************************************************** //
+  {
+    id: uuid(),
+    isNew: true,
+    title: "Tea Picker Mobile App",
+    description: "A smart, multi-user cloud-synced mobile app to manage tea picker records with offline support.",
+    github: ["https://github.com/KalharaBatangala/Tea-Picker-App"],
+    tags: ["Flutter", "Firestore", "Sqflite", "Google Auth"],
+    image: teapicker,
+    website: 'https://drive.google.com/file/d/16cAelbtBWRQBpPgE79_RgICX6GRLEmi0/view?usp=sharing'
   },
 // *************************************************************************** //
 
