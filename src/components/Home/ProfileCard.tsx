@@ -37,7 +37,7 @@ export default function ProfileCardWithZoom() {
           Kalhara Batangala
         </h1>
         <h2 className="text-lg sm:text-xl font-semibold tracking-wide text-gray-600 dark:text-gray-300 text-center sm:text-left">
-          Engineer | Invester
+          Engineer | Investor
         </h2>
         <p className="mt-2 text-base italic tracking-wide text-gray-500 dark:text-gray-400 text-center sm:text-left">
           Innovation. Inspiration. Excellence.
