@@ -6,7 +6,7 @@ interface CircularTextProps {
 
 export default function CircularText({
   className,
-  text = '• Web Developer • Engineer • Innovator ',
+  text = '• Web Developer • Engineer • Investor ',
   fontSize = 32,
 }: CircularTextProps) {
   return (
