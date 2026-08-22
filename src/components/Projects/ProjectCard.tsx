@@ -4,7 +4,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from '@/data/projects';
-import SupabaseImage from '@/components/SupabaseImage';
+
 import titaniumImage from '/public/assets/titanium.webp'; // Static import
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
@@ -102,11 +102,13 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 title={contributor.name}
                 className="block hover:scale-105 transition-transform duration-200"
               >
-                <SupabaseImage
-                  path={contributor.avatar}
-                  alt={contributor.name}
-                  className="w-8 h-8 rounded-full border-2 border-gray-800"
-                />
+                <Image
+                src={`/assets/${contributor.avatar}`}
+                alt={contributor.name}
+                width={32}
+                height={32}
+                className="w-8 h-8 rounded-full border-2 border-gray-800"
+              />
               </a>
             ))}
           </div>
