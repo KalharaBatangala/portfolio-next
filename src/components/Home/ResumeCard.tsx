@@ -15,7 +15,7 @@ const ResumeCard: React.FC = () => {
                     bg-secondary hover:bg-white hover:bg-opacity-90 hover:text-secondary transition-colors duration-300"
           aria-label="Download ML Engineer Resume"
         >
-          Software Engineer
+          Research Engineer
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
