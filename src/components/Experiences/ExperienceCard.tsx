@@ -8,11 +8,23 @@ type ExperienceCardProps = {
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
     <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-6 relative group overflow-hidden border border-[#FF7300]">
-      {experience.isFeatured && (
+      {/* {experience.isFeatured && (
         <div className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-semibold px-2 py-1 rounded shadow-lg z-10">
           Featured
         </div>
-      )}
+      )} */}
+      {experience.isFeatured && (
+  <div className="absolute top-0 left-0 w-28 h-28 overflow-hidden z-10">
+    <div
+      className="absolute top-[18px] left-[-34px] w-[140px] rotate-[-45deg]
+                 bg-gradient-to-r from-[#FF7300] to-[#ff8c33]
+                 text-white text-xs font-bold tracking-widest text-center
+                 py-1 shadow-lg"
+    >
+      FEATURED
+    </div>
+  </div>
+)}
 
 
       {/* Experience Head Section */}

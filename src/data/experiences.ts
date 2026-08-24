@@ -1,7 +1,8 @@
 
 import { StaticImageData } from 'next/image';
 import sltLogo from '/public/assets/slt-logo.webp'; 
-import bullet from '/public/assets/bullet.png'; 
+import bullet from '/public/assets/bullet.png';
+import ruhlogo from '/public/assets/ruh-logo.png'; 
 
 export interface Experience {
   id: string;
@@ -16,6 +17,34 @@ export interface Experience {
 }
 
 export const experiences: Experience[] = [
+  {
+    id: 'Probationary Lecturer',
+    company: 'Department of Electrical & Information Engineering, University of Ruhuna',
+    role: 'Lecturer (Probationary)',
+    duration: 'Aug 2026 - Present',
+    description: [
+      'Teaching undergraduate courses in Mobile Application Development, Computer Networks, and Machine Learning.',
+    ],
+    logo: ruhlogo,
+    techStack: [],
+    isFeatured: true,
+    documents: [
+    ],
+  },
+  {
+    id: 'Temporary-Instructor',
+    company: 'Department of Electrical & Information Engineering, University of Ruhuna',
+    role: 'Temporary Instructor',
+    duration: 'Jan 2026 - July 2026',
+    description: [
+      'Supported the teaching of undergraduate students in Computer Networks, Digital Logic Design and Digital Signal Processing Laboratory sessions, providing guidance and assistance in practical exercises and experiments.',
+    ],
+    logo: ruhlogo,
+    techStack: [],
+    isFeatured: false,
+    documents: [
+    ],
+  },
   {
     id: 'slt-internship',
     company: 'Sri Lanka Telecom Mobitel (SLT Mobitel)',
@@ -36,7 +65,7 @@ export const experiences: Experience[] = [
     ],
     logo: sltLogo,
     techStack: ['Azure', 'AWS', 'Docker', 'Kubernetes', 'CI/CD','RHEL'],
-    isFeatured: true,
+    isFeatured: false,
     documents: [
       { title: 'Data Center Visit Report', url: '/Documents/Report on Datacenter Visit.pdf' },
       { title: 'Kubernetes Cluster Setup Guide', url: '/Documents/Creating Kubernetes Cluster.pdf' },

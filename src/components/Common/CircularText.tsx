@@ -6,7 +6,7 @@ interface CircularTextProps {
 
 export default function CircularText({
   className,
-  text = '• Researcher • Engineer • Investor ',
+  text = '• Researcher • Engineer • Investor',
   fontSize = 32,
 }: CircularTextProps) {
   return (
@@ -26,7 +26,7 @@ export default function CircularText({
       <text
         fontSize={fontSize}
         fontWeight="bold"
-        letterSpacing="3"
+        letterSpacing="6"
         className="fill-current text-gray-600 dark:text-gray-300" // Tailwind for dark mode
       >
         <textPath href="#circlePath">{text}</textPath>
