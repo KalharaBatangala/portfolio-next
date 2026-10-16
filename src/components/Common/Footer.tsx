@@ -1,6 +1,7 @@
 
 import Link from 'next/link';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGoogleScholar } from 'react-icons/fa6';
 import Image from 'next/image';
 import logoImage from '/public/assets/falcon.webp';
 
@@ -39,6 +40,7 @@ const Footer = () => {
                 { label: 'Home', href: '/' },
                 { label: 'Projects', href: '/projects' },
                 { label: 'Education', href: '/education' },
+                { label: 'Publications', href: '/publications' },
                 { label: 'Experience', href: '/experience' },
                 { label: 'Contact', href: '/contact' },
               ].map((item) => (
@@ -85,6 +87,15 @@ const Footer = () => {
                 aria-label="Twitter"
               >
                 <FaTwitter className="w-6 h-6" />
+              </a>
+              <a
+                href="https://scholar.google.com/citations?user=h1_hcTwAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
+                aria-label="Google Scholar"
+              >
+                <FaGoogleScholar className="w-6 h-6" />
               </a>
             </div>
           </div>

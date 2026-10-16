@@ -21,6 +21,7 @@ export default function Navbar() {
     { label: 'Home', href: '/' },
     { label: 'Projects', href: '/projects' },
     { label: 'Education', href: '/education' },
+    { label: 'Publications', href: '/publications' },
     { label: 'Experience', href: '/experience' },
     { label: 'Contact', href: '/contact' },
   ];
@@ -53,7 +54,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <motion.div
-            className="hidden md:flex items-center space-x-8"
+            className="hidden md:flex items-center space-x-6 lg:space-x-8"
             initial={{ opacity: 1 }}
             whileHover={{ opacity: 1 }} // Container-level animation
           >
