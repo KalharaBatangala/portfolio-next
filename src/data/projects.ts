@@ -30,6 +30,7 @@ import bash from '/public/assets/bash.webp';
 import coffee from '/public/assets/Coffee.webp';
 import teapicker from '/public/assets/teapicker.webp';
 import men from '/public/assets/men.jpg';
+import diavola from '/public/assets/diavola.webp';
 
 
 // ******************** ENG THUMBNAILS ******************************* //
@@ -162,6 +163,18 @@ export const projects: Project[] = [
     tags: ["Azure", "Backend"],
     image: passkey,
     contributors: [contributors.Kalhara, contributors.Isuri]
+  },
+// *************************************************************************** //
+  {
+    id: uuid(),
+    isNew: false,
+    title: "Vito's Pizza Hut",
+    description: "Web Application for Small Businesses",
+    github: ["https://github.com/KalharaBatangala/Pedro-s-Pizza"],
+    tags: ["React", "Backend", "Frontend"],
+    image: diavola,
+    contributors: [contributors.Kalhara],
+    website: "https://vitospizzahut.netlify.app/"
   },
 // *************************************************************************** //
 
