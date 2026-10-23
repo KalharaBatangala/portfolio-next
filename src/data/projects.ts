@@ -29,6 +29,7 @@ import cuda from '/public/assets/rtx.webp';
 import bash from '/public/assets/bash.webp';
 import coffee from '/public/assets/Coffee.webp';
 import teapicker from '/public/assets/teapicker.webp';
+import men from '/public/assets/men.jpg';
 
 
 // ******************** ENG THUMBNAILS ******************************* //
@@ -120,12 +121,24 @@ export const projects: Project[] = [
 
   {
     id: uuid(),
-    isNew: true,
+    isNew: false,
     title: "Real-Time Chat App",
     description: "Built with FastAPI, Flask & Socket.IO for real-time communication.",
     github: ["https://github.com/KalharaBatangala/RealTime-chat-app"],
     tags: ["FastAPI", "Flask", "Socket.IO"],
     image: realtime,
+  },
+// *************************************************************************** //
+  {
+    id: uuid(),
+    isNew: true,
+    title: "Vellora - Ecommerce Web App for Textiles",
+    description: "Built using React, MongoDB, Nodejs",
+    github: ["https://github.com/KalharaBatangala/vellora"],
+    tags: ["React", "MongoDB", "NodeJS"],
+    image: men,
+    contributors: [contributors.Kalhara],
+    website: 'https://vellora-mu.vercel.app/'
   },
 // *************************************************************************** //
 
