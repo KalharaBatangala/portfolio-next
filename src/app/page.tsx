@@ -34,19 +34,33 @@ export default function Home() {
         {/* Left: About Me */}
         <div className="flex-1">
           <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">
-            About Me
+            About
           </h3>
           <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
-            I&apos;m Kalhara Batangala, an aspiring engineer passionate about
-            leveraging technology to solve real-world problems. With a keen
-            interest in DevOps, system administration, and deep learning for
-            medical imaging, I strive to build innovative solutions that drive
-            progress and impact lives positively.
+            Kalhara Batangala is a Probationary Lecturer in the Department of
+            Electrical and Information Engineering, Faculty of Engineering,
+            University of Ruhuna, where he teaches Mobile Application
+            Development, Computer Networks and Machine Learning. He holds a BSc Engineering
+            (Hons) in Computer Engineering from the Faculty of Engineering,
+            University of Sri Jayewardenepura.
           </p>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 text-justify">
-            I build resilient systems designed to withstand failures, adhering
-            to industry best practices to deliver high-quality products with
-            robust performance and reliability.
+            His research centres on deep learning for medical imaging. His
+            final-year research combined deep learning for image classification
+            with GPU parallel programming, and his work on brain tumour
+            classification using deep residual networks was published in the
+            proceedings of the 2026 Moratuwa Engineering Research Conference
+            (MERCon). His wider interests include machine learning, optical
+            networks and wireless communications.
+          </p>
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 text-justify">
+            During his undergraduate studies, he interned in DevOps and cloud
+            operations at SLT-Mobitel, building CI/CD pipelines, running
+            containerised workloads on Docker and Kubernetes, and administering
+            Linux and Windows servers across on-premises and cloud environments.
+            That industry grounding shapes both his engineering and his
+            teaching: systems that are reliable, secure and built to withstand
+            failure.
           </p>
 
           {/* Rotating Contact Below About Me */}
