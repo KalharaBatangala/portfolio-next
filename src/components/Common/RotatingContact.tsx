@@ -1,13 +1,13 @@
 'use client';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import CircularText from './CircularText'; 
+import CircularText from './CircularText';
 // Reusable spinning circle text (you can replace this with your own SVG file if needed)
 
+// Created once at module level: creating it inside the component remounts the link on every render
+const MotionLink = motion.create(Link);
 
 export default function RotatingContact() {
-  const MotionLink = motion(Link);
-
   return (
     <div className="flex items-center justify-center mt-30">
       <div className="relative w-48 h-48 sm:w-40 sm:h-40">

@@ -10,16 +10,6 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'via.placeholder.com',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'ythbmiddineeqbsayptz.supabase.co',
-        pathname: '/storage/v1/object/sign/**',
-      },
-      {
-        protocol: 'https',
         hostname: 'ghchart.rshah.org',
         pathname: '/**',
       },

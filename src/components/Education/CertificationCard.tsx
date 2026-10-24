@@ -35,8 +35,8 @@ export default function CertificationCard({ name, issuer, date, link, background
           }}
         >
           <h3 className="text-xl font-semibold mb-2">{name}</h3>
-          <p className="text-base text-muted-foreground mb-1">{issuer}</p>
-          <p className="text-sm text-muted-foreground">{date}</p>
+          <p className="text-base text-white/80 mb-1">{issuer}</p>
+          <p className="text-sm text-white/70">{date}</p>
         </motion.div>
 
         {/* Back Side */}

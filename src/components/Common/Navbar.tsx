@@ -4,9 +4,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useContext } from 'react';
+import { usePathname } from 'next/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { ThemeContext } from '@/context/ThemeContext';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
 import logoImage from '/public/assets/falcon.webp'; // Static import for optimization
 import slLogo from '/public/assets/sl.webp'; // SL logo import
@@ -14,6 +15,8 @@ import slLogo from '/public/assets/sl.webp'; // SL logo import
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useContext(ThemeContext);
+  const pathname = usePathname();
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -63,7 +66,8 @@ export default function Navbar() {
                 key={label}
                 href={href}
                 prefetch={true} // Explicit prefetching
-                className="text-white dark:text-gray-100 hover:text-secondary dark:hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-secondary after:transition-all after:duration-300 hover:after:w-full"
+                aria-current={isActive(href) ? 'page' : undefined}
+                className={`${isActive(href) ? 'text-secondary after:w-full' : 'text-white dark:text-gray-100 after:w-0'} hover:text-secondary dark:hover:text-secondary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-secondary after:transition-all after:duration-300 hover:after:w-full`}
               >
                 {label}
               </Link>
@@ -102,13 +106,14 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
+      <AnimatePresence>
       {isOpen && (
         <motion.div
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-primary dark:bg-gray-900 border-t border-gray-600 dark:border-gray-700"
+          className="md:hidden overflow-hidden bg-primary dark:bg-gray-900 border-t border-gray-600 dark:border-gray-700"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map(({ label, href }) => (
@@ -117,7 +122,8 @@ export default function Navbar() {
                 href={href}
                 prefetch={true}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-2 text-white dark:text-gray-100 hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300"
+                aria-current={isActive(href) ? 'page' : undefined}
+                className={`block px-3 py-2 ${isActive(href) ? 'text-secondary' : 'text-white dark:text-gray-100'} hover:text-secondary hover:bg-gray-700 dark:hover:bg-gray-600 rounded-md transition-colors duration-300`}
               >
                 {label}
               </Link>
@@ -151,6 +157,7 @@ export default function Navbar() {
           </div>
         </motion.div>
       )}
+      </AnimatePresence>
     </nav>
   );
 }

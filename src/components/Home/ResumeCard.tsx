@@ -13,7 +13,7 @@ const ResumeCard: React.FC = () => {
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-white font-semibold text-center
                     bg-secondary hover:bg-white hover:bg-opacity-90 hover:text-secondary transition-colors duration-300"
-          aria-label="Download ML Engineer Resume"
+          aria-label="Open Research Engineer resume"
         >
           Research Engineer
           <svg
@@ -43,7 +43,7 @@ const ResumeCard: React.FC = () => {
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-secondary font-semibold text-center
                     bg-white hover:bg-secondary hover:bg-opacity-90 hover:text-white transition-colors duration-300"
-          aria-label="Download ML Engineer Resume"
+          aria-label="Open DevOps Engineer resume"
         >
           DevOps Engineer
           <svg

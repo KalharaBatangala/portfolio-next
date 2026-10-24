@@ -23,10 +23,9 @@ interface ThemeProviderProps {
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
+  // The inline script in app/layout.tsx has already applied the saved theme; sync state with it
   useEffect(() => {
-    const savedTheme = (localStorage.getItem("theme") as "light" | "dark") || "light";
-    setTheme(savedTheme);
-    document.documentElement.classList.toggle("dark", savedTheme === "dark");
+    setTheme(document.documentElement.classList.contains("dark") ? "dark" : "light");
   }, []);
 
   const toggleTheme = () => {

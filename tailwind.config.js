@@ -12,12 +12,19 @@ const config = {
         secondary: '#FF7300', // Orange
         'text-secondary': '#D1D5DB', // Light gray
         'text-tertiary': '#9CA3AF', // Muted gray
+        // Theme-aware tokens, defined as CSS variables in globals.css
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        'card-bg': 'rgb(var(--card-bg) / <alpha-value>)',
+        border: 'rgb(var(--border) / <alpha-value>)',
+        'muted-foreground': 'rgb(var(--muted-foreground) / <alpha-value>)',
       },
       animation: {
         'spin-slower': 'spin 12s linear infinite',
       },
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
+        // Loaded with next/font in app/layout.tsx
+        poppins: ['var(--font-poppins)', 'Poppins', 'sans-serif'],
       },
       fontSize: {
         '2xl': '1.5rem',
