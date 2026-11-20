@@ -2,7 +2,6 @@
 "use client";
 
 import { motion, useScroll } from 'framer-motion';
-import { useRef } from 'react';
 
 interface LiIconProps {
   reference: React.RefObject<HTMLLIElement | null>;
@@ -21,7 +20,7 @@ export default function LiIcon({ reference }: LiIconProps) {
           cx="75"
           cy="50"
           r="20"
-          className="stroke-primary stroke-1 fill-none"
+          className="stroke-primary dark:stroke-gray-400 stroke-1 fill-none"
         />
         <motion.circle
           cx="75"

@@ -9,8 +9,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { ThemeContext } from '@/context/ThemeContext';
 import { AnimatePresence, motion } from 'framer-motion';
 import { DarkModeSwitch } from 'react-toggle-dark-mode';
-import logoImage from '/public/assets/falcon.webp'; // Static import for optimization
 import slLogo from '/public/assets/sl.webp'; // SL logo import
+import BrandMark from '@/components/Common/BrandMark';
+import { navItems } from '@/data/navigation';
+import { palette } from '@/theme/theme';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,15 +22,6 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Projects', href: '/projects' },
-    { label: 'Education', href: '/education' },
-    { label: 'Publications', href: '/publications' },
-    { label: 'Experience', href: '/experience' },
-    { label: 'Contact', href: '/contact' },
-  ];
-
   const linkVariants = {
     hover: { scale: 1.1, transition: { duration: 0.2 } },
     tap: { scale: 0.95 },
@@ -37,21 +30,13 @@ export default function Navbar() {
   const isDark = theme === 'dark';
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-primary dark:bg-gray-900 shadow-md z-50 font-poppins border-b border-secondary">
+    <nav className="surface-brand fixed top-0 left-0 w-full bg-primary dark:bg-gray-900 shadow-md z-50 font-poppins border-b border-secondary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div whileHover="hover" whileTap="tap" variants={linkVariants}>
-            <Link href="/" prefetch={true}>
-              <Image
-                src={logoImage}
-                alt="Kalhara Batangala Logo"
-                width={48}
-                height={48}
-                sizes="(max-width: 640px) 40px, 48px" // Responsive sizing
-                placeholder="blur" // Faster perceived load
-                className="h-10 w-10 sm:h-12 sm:w-12 object-contain" // Consistent scaling
-              />
+            <Link href="/" prefetch={true} onClick={() => setIsOpen(false)} className="flex">
+              <BrandMark className="h-10 w-10 sm:h-12 sm:w-12 bg-gold-metallic" />
             </Link>
           </motion.div>
 
@@ -76,8 +61,8 @@ export default function Navbar() {
               checked={isDark}
               onChange={toggleTheme}
               size={24}
-              sunColor="#FF7300"
-              moonColor="#D1D5DB"
+              sunColor={palette.gold[500]}
+              moonColor={palette.gold[200]}
               className="cursor-pointer"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             />
@@ -136,8 +121,8 @@ export default function Navbar() {
                   setIsOpen(false); // Close menu on toggle
                 }}
                 size={24}
-                sunColor="#FF7300"
-                moonColor="#D1D5DB"
+                sunColor={palette.gold[500]}
+                moonColor={palette.gold[200]}
                 className="cursor-pointer mr-2"
                 aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               />

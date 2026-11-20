@@ -1,6 +1,10 @@
 'use client';
 
 import Image from 'next/image';
+import { palette } from '@/theme/theme';
+
+// The chart service takes the colour as hex without '#'
+const chartColor = palette.gold[500].replace('#', '');
 
 type GitHubCardProps = {
   username: string;
@@ -10,13 +14,13 @@ export default function GitHubCard({ username }: GitHubCardProps) {
   return (
     <div className="container mx-auto px-4 py-16 -mt-2">
       <div
-        className="relative p-[5px] rounded-2xl overflow-hidden max-w-4xl mx-auto animate-border-gradient-orange"
+        className="relative p-[5px] rounded-2xl overflow-hidden max-w-4xl mx-auto animate-border-gradient-accent"
         style={{
           border: '2px solid transparent', // Required for border-image
           borderImageSlice: 1,
         }}
       >
-        <div className="rounded-2xl bg-gray-900 shadow-xl p-8">
+        <div className="surface-brand rounded-2xl bg-gray-900 shadow-xl p-8">
           <h1 className="text-4xl font-bold text-white mb-6 text-center">
             Github <span className="text-secondary">Contributions</span>
           </h1>
@@ -26,7 +30,7 @@ export default function GitHubCard({ username }: GitHubCardProps) {
           </p>
           <div className="flex justify-center">
             <Image
-              src={`https://ghchart.rshah.org/FF7300/${username}`}
+              src={`https://ghchart.rshah.org/${chartColor}/${username}`}
               alt={`${username}'s GitHub contribution graph`}
               width={900}
               height={200}

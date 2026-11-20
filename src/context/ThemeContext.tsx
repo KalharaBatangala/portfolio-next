@@ -1,7 +1,6 @@
 "use client";
 
 import React, { createContext, useState, useEffect, useContext, ReactNode } from "react";
-import { motion } from "framer-motion";
 
 // Define the shape of the context
 interface ThemeContextType {

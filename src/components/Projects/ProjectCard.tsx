@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index, onOpen }) => 
                    border border-black/[0.06] bg-white/80 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_12px_32px_-16px_rgba(0,0,0,0.18)] backdrop-blur-sm
                    dark:border-white/10 dark:bg-white/[0.03] dark:shadow-none
                    transition-[border-color,box-shadow] duration-500 ease-out
-                   hover:border-secondary/40 hover:shadow-[0_24px_48px_-24px_rgba(255,115,0,0.45)]
+                   hover:border-secondary/40 hover:shadow-[0_24px_48px_-24px_rgb(var(--secondary)/0.45)]
                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-gray-200 dark:focus-visible:ring-offset-gray-900"
       >
         <motion.div

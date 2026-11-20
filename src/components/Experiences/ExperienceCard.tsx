@@ -7,9 +7,9 @@ type ExperienceCardProps = {
 
 export default function ExperienceCard({ experience }: ExperienceCardProps) {
   return (
-    <div className="bg-gray-900 rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-6 relative group overflow-hidden border border-[#FF7300]">
+    <div className="surface-brand bg-gray-900 rounded-lg shadow-lg p-6 max-w-4xl mx-auto mb-6 relative group overflow-hidden border border-secondary">
       {/* {experience.isFeatured && (
-        <div className="absolute top-3 left-3 bg-orange-600 text-white text-xs font-semibold px-2 py-1 rounded shadow-lg z-10">
+        <div className="absolute top-3 left-3 bg-secondary text-on-secondary text-xs font-semibold px-2 py-1 rounded shadow-lg z-10">
           Featured
         </div>
       )} */}
@@ -17,8 +17,8 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
   <div className="absolute top-0 left-0 w-28 h-28 overflow-hidden z-10">
     <div
       className="absolute top-[18px] left-[-34px] w-[140px] rotate-[-45deg]
-                 bg-gradient-to-r from-[#FF7300] to-[#ff8c33]
-                 text-white text-xs font-bold tracking-widest text-center
+                 bg-gold-metallic
+                 text-on-secondary text-xs font-bold tracking-widest text-center
                  py-1 shadow-lg"
     >
       FEATURED
@@ -59,7 +59,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
       {experience.techStack && (
         <div className="flex flex-wrap gap-2">
           {experience.techStack.map((tech, idx) => (
-            <span key={idx} className="bg-orange-600 text-white text-xs px-2 py-1 rounded-full">
+            <span key={idx} className="bg-secondary text-on-secondary text-xs px-2 py-1 rounded-full">
               {tech}
             </span>
           ))}

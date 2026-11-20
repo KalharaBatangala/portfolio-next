@@ -1,67 +1,34 @@
-// src/components/ResumeCard.tsx
+// src/components/Home/ResumeCard.tsx
 import React from 'react';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
+import { profile } from '@/data/profile';
+
+const buttonBase =
+  'flex items-center justify-center gap-2 flex-1 px-4 py-3 rounded-md border-2 border-secondary font-semibold text-center text-sm transition-colors duration-300';
 
 const ResumeCard: React.FC = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-xl p-6 max-w-sm w-full mx-auto md:mx-0">
-      <h3 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">Resumes</h3>
+    <div className="relative overflow-hidden bg-card-bg border border-border rounded-2xl shadow-xl p-6 w-full">
+      <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-gold-metallic" />
+      <h3 className="font-display text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-6">Resumes</h3>
       <div className="flex gap-4">
-        {/* ML Engineer Resume Button */}
-        <a
-          href="/Kalhara_Batangala_CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-white font-semibold text-center
-                    bg-secondary hover:bg-white hover:bg-opacity-90 hover:text-secondary transition-colors duration-300"
-          aria-label="Open Research Engineer resume"
-        >
-          Research Engineer
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-8 h-8"
+        {profile.resumes.map((resume, i) => (
+          <a
+            key={resume.href}
+            href={resume.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={resume.ariaLabel}
+            className={`${buttonBase} ${
+              i === 0
+                ? 'bg-secondary text-on-secondary hover:bg-transparent hover:text-secondary'
+                : 'bg-transparent text-secondary hover:bg-secondary hover:text-on-secondary'
+            }`}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-            />
-          </svg>
-        </a>
-
-
-
-
-        {/* DevOps Engineer Resume Button */}
-
-                <a
-          href="/Kalhara_SoftwareEngineer.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 flex-1 px-5 py-3 rounded-md border-2 border-secondary text-secondary font-semibold text-center
-                    bg-white hover:bg-secondary hover:bg-opacity-90 hover:text-white transition-colors duration-300"
-          aria-label="Open DevOps Engineer resume"
-        >
-          DevOps Engineer
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-8 h-8"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-            />
-          </svg>
-        </a>
-
+            {resume.label}
+            <ArrowTopRightOnSquareIcon className="w-5 h-5 flex-none" />
+          </a>
+        ))}
       </div>
     </div>
   );

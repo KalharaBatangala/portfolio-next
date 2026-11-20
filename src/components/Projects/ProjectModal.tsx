@@ -183,7 +183,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     href={project.website.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-white shadow-[0_8px_24px_-8px_rgba(255,115,0,0.7)] transition-colors hover:bg-orange-600"
+                    className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-on-secondary shadow-[0_8px_24px_-8px_rgb(var(--secondary)/0.7)] transition-colors hover:bg-secondary-hover"
                   >
                     {project.website.label}
                     <ArrowUpRightIcon className="h-4 w-4" />

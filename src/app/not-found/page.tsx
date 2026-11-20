@@ -24,7 +24,7 @@ export default function NotFoundPage() {
       {/* Button */}
       <Link
         href="/"
-        className="mt-6 inline-block px-6 py-3 bg-secondary text-white rounded-lg shadow-lg hover:bg-orange-600 transition-colors"
+        className="mt-6 inline-block px-6 py-3 bg-secondary text-on-secondary font-semibold rounded-lg shadow-lg hover:bg-secondary-hover transition-colors"
       >
         Go Back Home
       </Link>

@@ -1,13 +1,10 @@
-
 import Link from 'next/link';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { FaGoogleScholar } from 'react-icons/fa6';
-import Image from 'next/image';
-import logoImage from '/public/assets/falcon.webp';
+import BrandMark from '@/components/Common/BrandMark';
+import { navItems, socialLinks } from '@/data/navigation';
 
 const Footer = () => {
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="surface-brand bg-primary dark:bg-gray-950 text-white py-8 border-t border-secondary/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand/Logo Section */}
@@ -15,17 +12,9 @@ const Footer = () => {
             <Link
               href="/"
               prefetch={true}
-              className="text-2xl font-bold text-secondary mb-4 hover:scale-110 active:scale-95 transition duration-200"
+              className="mb-4 hover:scale-110 active:scale-95 transition duration-200"
             >
-              <Image
-                src={logoImage}
-                alt="Kalhara Batangala Logo"
-                width={48}
-                height={48}
-                sizes="(max-width: 768px) 40px, 48px"
-                placeholder="blur"
-                className="w-auto h-12"
-              />
+              <BrandMark className="h-12 w-12 bg-gold-metallic" />
             </Link>
             <p className="text-text-tertiary text-sm text-center md:text-left">
               Pioneering intelligent solutions.
@@ -36,14 +25,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-lg font-semibold text-secondary mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'Projects', href: '/projects' },
-                { label: 'Education', href: '/education' },
-                { label: 'Publications', href: '/publications' },
-                { label: 'Experience', href: '/experience' },
-                { label: 'Contact', href: '/contact' },
-              ].map((item) => (
+              {navItems.map((item) => (
                 <li key={item.label}>
                   <Link
                     href={item.href}
@@ -61,48 +43,24 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-lg font-semibold text-secondary mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a
-                href="https://github.com/KalharaBatangala"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
-                aria-label="GitHub"
-              >
-                <FaGithub className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.linkedin.com/in/kalhara-batangala-2bb635213/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin className="w-6 h-6" />
-              </a>
-              <a
-                href="https://x.com/KalharaBat27340"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
-                aria-label="Twitter"
-              >
-                <FaTwitter className="w-6 h-6" />
-              </a>
-              <a
-                href="https://scholar.google.com/citations?user=h1_hcTwAAAAJ"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
-                aria-label="Google Scholar"
-              >
-                <FaGoogleScholar className="w-6 h-6" />
-              </a>
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-secondary hover:text-secondary hover:scale-110 active:scale-95 transition duration-200"
+                  aria-label={label}
+                >
+                  <Icon className="w-6 h-6" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
         {/* Copyright Notice */}
-        <div className="mt-8 pt-8 border-t border-secondary text-center">
+        <div className="mt-8 pt-8 border-t border-secondary/60 text-center">
           <p className="text-text-tertiary text-sm">
             &copy; {new Date().getFullYear()} Kalhara Batangala. All rights reserved.
           </p>
