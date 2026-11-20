@@ -1,14 +1,9 @@
 // /src/app/api/contact/route.ts
 
 import { Resend } from 'resend';
+import { contactEmailHtml, contactEmailText } from '@/lib/contactEmail';
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-// Visitor input goes into the email's HTML, so escape it first
-const escapeHtml = (value: string) =>
-  value.replace(/[&<>"']/g, (char) =>
-    ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char] as string,
-  );
 
 const field = (value: unknown, maxLength: number) =>
   typeof value === 'string' ? value.trim().slice(0, maxLength) : '';
@@ -42,16 +37,8 @@ export async function POST(req: Request) {
     to: 'kalharabatangala@gmail.com', // Your email
     replyTo: email,
     subject: 'Message from Portfolio Website',
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-    html: `
-      <div style="font-family: Arial, sans-serif; padding: 20px;">
-        <img src="https://kalhara.vercel.app/assets/email-profile.webp" alt="Kalhara Profile" style="max-width: 100px; margin-bottom: 20px;" />
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
-        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-        <p><strong>Message:</strong> ${escapeHtml(message).replace(/\n/g, '<br />')}</p>
-      </div>
-    `,
+    text: contactEmailText({ name, email, message }),
+    html: contactEmailHtml({ name, email, message }),
   });
 
   if (error) {
