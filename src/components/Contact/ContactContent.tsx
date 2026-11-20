@@ -5,6 +5,7 @@ import { useState } from 'react';
 import Swal from 'sweetalert2';
 import Handwriting from '@/components/HandWriting';
 import ContactAnimation from '@/components/ConnectAnimation';
+import { feedback } from '@/theme/theme';
 
 export default function ContactContent() {
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ export default function ContactContent() {
           icon: 'success',
           title: 'Message Sent Successfully!',
           text: 'Thank you for reaching out.',
-          confirmButtonColor: '#4CAF50',
+          confirmButtonColor: feedback.success,
           timer: 5000,
           timerProgressBar: true,
         });
@@ -47,15 +48,15 @@ export default function ContactContent() {
           icon: 'error',
           title: 'Message Not Sent!',
           text: 'Failed to send message. Please try again.',
-          confirmButtonColor: '#d33',
+          confirmButtonColor: feedback.error,
         });
       }
-    } catch (error) {
+    } catch {
       Swal.fire({
         icon: 'error',
         title: 'Message Not Sent!',
         text: 'Failed to send message. Please try again.',
-        confirmButtonColor: '#d33',
+        confirmButtonColor: feedback.error,
       });
     }
   };
@@ -124,7 +125,7 @@ export default function ContactContent() {
           </div>
           <button
             type="submit"
-            className="w-full py-2 sm:py-3 bg-secondary text-white font-semibold rounded-md hover:bg-orange-600 transition-colors duration-300 text-sm sm:text-base"
+            className="w-full py-2 sm:py-3 bg-secondary text-on-secondary font-semibold rounded-md hover:bg-secondary-hover transition-colors duration-300 text-sm sm:text-base"
           >
             Send Message
           </button>

@@ -8,7 +8,7 @@ type PublicationItemProps = {
 };
 
 const linkClass =
-  'inline-flex items-center gap-1 text-sm font-medium text-secondary hover:text-orange-600 dark:hover:text-gray-300 transition-colors duration-200';
+  'inline-flex items-center gap-1 text-sm font-medium text-secondary hover:text-primary dark:hover:text-gray-300 transition-colors duration-200';
 
 export default function PublicationItem({ publication, index }: PublicationItemProps) {
   const { title, authors, venue, year, month, location, volume, issue, pages, doi, url, urlLabel, status } =

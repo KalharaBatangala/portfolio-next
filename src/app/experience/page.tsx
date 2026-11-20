@@ -18,8 +18,8 @@ export default function ExperiencePage() {
     <>
       <SplashAnimation />
 
-      <div className="relative bg-gray-200 dark:bg-black">
-        <div className="relative z-10 bg-gray-200 dark:bg-black bg-opacity-30 min-h-screen">
+      <div className="relative bg-gray-200 dark:bg-gray-950">
+        <div className="relative z-10 bg-gray-200 dark:bg-gray-950 bg-opacity-30 min-h-screen">
           <ExperienceSection />
 
           {/* Divider */}

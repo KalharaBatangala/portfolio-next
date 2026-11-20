@@ -1,15 +1,14 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import logoImage from '/public/assets/falcon.webp'; // Static import for optimization
+import BrandMark from '@/components/Common/BrandMark';
 
 export default function SplashAnimation() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 1500); // Stay for 2.5s
+    const timer = setTimeout(() => setShowSplash(false), 1500); // Removed once the 1s fade has finished
     return () => clearTimeout(timer);
   }, []);
 
@@ -35,15 +34,8 @@ export default function SplashAnimation() {
             zIndex: 9999,
           }}
         >
-          <Image
-            src={logoImage}
-            alt="Falcon Logo"
-            width={500}
-            height={500}
-            sizes="50vw"
-            placeholder="blur"
-            className="w-[50vw] h-auto"
-          />
+          {/* Navy on light pages, gold on dark: the white logo was invisible in light mode */}
+          <BrandMark label="Falcon Logo" className="w-[50vw] aspect-square bg-primary dark:bg-secondary" />
         </motion.div>
       )}
     </AnimatePresence>

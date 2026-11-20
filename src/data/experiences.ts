@@ -1,7 +1,6 @@
 
 import { StaticImageData } from 'next/image';
 import sltLogo from '/public/assets/slt-logo.webp'; 
-import bullet from '/public/assets/bullet.png';
 import ruhlogo from '/public/assets/ruh-logo.png'; 
 
 export interface Experience {

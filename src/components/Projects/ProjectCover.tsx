@@ -3,19 +3,20 @@
 // so the page never depends on stock photos.
 import { useId } from 'react';
 import type { ProjectCoverArt } from '@/data/projects';
+import { palette, hexToRgbChannels } from '@/theme/theme';
 
 const C = {
   line: 'rgba(255,255,255,0.78)',
   dim: 'rgba(255,255,255,0.38)',
   faint: 'rgba(255,255,255,0.16)',
   panel: 'rgba(8,8,8,0.55)',
-  accent: '#FF7300',
-  accentSoft: 'rgba(255,115,0,0.16)',
+  accent: palette.gold[500],
+  accentSoft: `rgb(${hexToRgbChannels(palette.gold[500])} / 0.16)`,
   mono: 'ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
   serif: 'Georgia, "Times New Roman", serif',
 };
 
-// Where the orange glow sits, as a fraction of the cover (x, y)
+// Where the accent glow sits, as a fraction of the cover (x, y)
 const glowPosition: Record<ProjectCoverArt, [number, number]> = {
   terminal: [0.2, 0.15],
   mri: [0.65, 0.35],
@@ -685,13 +686,13 @@ export default function ProjectCover({ art, className = '' }: { art: ProjectCove
     >
       <defs>
         <linearGradient id={`${id}-bg`} x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#1f1c1d" />
-          <stop offset="1" stopColor="#0b0a0a" />
+          <stop offset="0" stopColor={palette.navy[800]} />
+          <stop offset="1" stopColor={palette.navy[950]} />
         </linearGradient>
         <radialGradient id={`${id}-glow`} cx={gx} cy={gy} r="0.75">
-          <stop offset="0" stopColor="#FF7300" stopOpacity={0.32} />
-          <stop offset="0.45" stopColor="#FF7300" stopOpacity={0.06} />
-          <stop offset="1" stopColor="#FF7300" stopOpacity={0} />
+          <stop offset="0" stopColor={C.accent} stopOpacity={0.32} />
+          <stop offset="0.45" stopColor={C.accent} stopOpacity={0.06} />
+          <stop offset="1" stopColor={C.accent} stopOpacity={0} />
         </radialGradient>
         <pattern id={`${id}-dots`} width="16" height="16" patternUnits="userSpaceOnUse">
           <circle cx="1" cy="1" r="0.9" fill="rgba(255,255,255,0.09)" />

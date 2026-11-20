@@ -1,70 +1,34 @@
-
-import Image from 'next/image';
+import Hero from '@/components/Home/Hero';
 import EnthusiasmCard from '@/components/Home/EnthusiasmCard';
 import ResumeCard from '@/components/Home/ResumeCard';
 import RotatingContact from '@/components/Common/RotatingContact';
-import ProfileCard from '@/components/Home/ProfileCard';
-import bannerImage from '/public/assets/Portfolio-banner.webp'; // Static import
-
-
+import { profile } from '@/data/profile';
 
 export default function Home() {
   return (
-    <div className="relative w-full min-h-screen bg-transparent dark:bg-gray-900 font-poppins">
-      {/* Banner */}
-      <div className="mt-16 pt-12 px-12 relative overflow-hidden " style={{ height: '350px' }} >
-        
-        <Image
-          src={bannerImage} // Use static import  
-          alt="Portfolio Banner"
-          fill
-          sizes="100vw"
-          priority
-          placeholder="blur" 
-          className="object-cover object-bottom"
-        />
-        
-      </div>
-
-      {/* Profile Card */}
-      <ProfileCard />
+    <div className="relative w-full min-h-screen bg-background font-poppins">
+      <Hero />
 
       {/* Main Content */}
-      <div className="relative mt-[150px] mb-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
+      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 flex flex-col md:flex-row gap-12">
         {/* Left: About Me */}
         <div className="flex-1">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">
-            About
-          </h3>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-justify">
-            Kalhara Batangala is a Probationary Lecturer in the Department of
-            Electrical and Information Engineering, Faculty of Engineering,
-            University of Ruhuna, where he teaches Mobile Application
-            Development, Computer Networks and Machine Learning. He holds a BSc Engineering
-            (Hons) in Computer Engineering from the Faculty of Engineering,
-            University of Sri Jayewardenepura.
+          <p className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-secondary">
+            <span aria-hidden="true" className="h-px w-10 bg-secondary" />
+            Profile
           </p>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 text-justify">
-            His research centres on deep learning for medical imaging. His
-            final-year research combined deep learning for image classification
-            with GPU parallel programming, and his work on brain tumour
-            classification using deep residual networks was published in the
-            proceedings of the 2026 Moratuwa Engineering Research Conference
-            (MERCon). His wider interests include machine learning, optical
-            networks and wireless communications.
-          </p>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 text-justify">
-            During his undergraduate studies, he interned in DevOps and cloud
-            operations at SLT-Mobitel, building CI/CD pipelines, running
-            containerised workloads on Docker and Kubernetes, and administering
-            Linux and Windows servers across on-premises and cloud environments.
-            That industry grounding shapes both his engineering and his
-            teaching: systems that are reliable, secure and built to withstand
-            failure.
-          </p>
+          <h2 className="mt-3 font-display text-4xl font-semibold text-gray-900 dark:text-white mb-8">About</h2>
+          {profile.about.map((paragraph, i) => (
+            <p
+              key={i}
+              className={`${i > 0 ? 'mt-5' : ''} text-lg leading-relaxed text-gray-600 dark:text-gray-300 sm:text-justify`}
+            >
+              {paragraph}
+            </p>
+          ))}
 
           {/* Rotating Contact Below About Me */}
-          <div className="mt-8 flex justify-center md:justify-start">
+          <div className="mt-10 flex justify-center md:justify-start">
             <RotatingContact />
           </div>
         </div>
@@ -73,20 +37,17 @@ export default function Home() {
         <div
           className="hidden md:block border-l border-secondary h-auto self-stretch"
           style={{
-            maskImage:
-              'linear-gradient(to bottom, black 0%, transparent 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, black 0%, transparent 100%)',
+            maskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 0%, transparent 100%)',
           }}
         />
 
         {/* Right: Resume & Enthusiasm */}
-        <div className="flex flex-col max-w-sm w-full md:ml-auto gap-8">
+        <div className="flex flex-col max-w-sm w-full mx-auto md:mx-0 md:ml-auto gap-8">
           <ResumeCard />
           <EnthusiasmCard />
         </div>
-      </div>
+      </section>
     </div>
   );
 }
-
